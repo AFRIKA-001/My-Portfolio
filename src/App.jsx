@@ -1,4 +1,5 @@
 import NavigationBar from "./components/NavigationBar"
+import HeroSecton from "./components/HeroSection"
 function App() {
   
 
@@ -6,6 +7,7 @@ function App() {
     <>
    
  <NavigationBar/>
+ <HeroSecton/>
   
    
     
