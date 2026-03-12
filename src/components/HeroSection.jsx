@@ -2,8 +2,8 @@ import ProfImg from "../public/profile.png"
 
 export default function HeroSecton(){
     return<>
-    <section className="text-2xl text-center my-18">
-         <img className="h-40 w-60 flex mx-auto mb-8 object-contain rounded-4xl" src={ProfImg} alt="" />
+    <section className="text-2xl text-center my-25">
+         <img className="h-40 w-60 flex mx-auto mb-8 my-16 object-contain rounded-4xl" src={ProfImg} alt="" />
   <strong><h1 className="text-4xl text-slate-50 leading-relaxed font-serrif">Hi,I'm <span className="font-bold  text-transparent bg-clip-text bg-gradient-to-r from-[#B82FF6] to-[#EE8425]"> Shikuku Gabriel</span>,a Frontend Developer based in Kenya. </h1></strong> 
    <p className="text-emerald-100 text-3xl">I am a junior frontend developer from Nairobi,Kenya dealing with <span className="text-white">html,css,js ,react.js,next.js and tailwindcss</span> </p>
    <div className="p-20  space-x-9">
