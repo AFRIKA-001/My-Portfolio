@@ -7,7 +7,7 @@
     return <>
     <section className='bg-[#0B1120] py-18 '>
         
-           <h1 className='text-6xl text-center mb-20 font-bold  text-transparent bg-clip-text bg-gradient-to-r from-[#ad03fc] to-[#ff7b07]'><span className='font-bold text-7xl'>A</span>bout Me</h1>
+           <h1 className='text-6xl text-center mb-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-[#ad03fc] to-[#ff7b07]'><span className='font-bold text-7xl'>A</span>bout Me</h1>
            <div className=' my-10  grid grid-cols-1 md:grid-cols-2  items-center'>
         <img  className=' flex mx-auto rounded-2xl object-contain'src={ProfilePic} alt="Gabriel" />
         <p className='text-xl flex mx-auto  pt-10 text-white font-medium leading-relaxed'>
