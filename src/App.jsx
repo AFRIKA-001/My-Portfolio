@@ -3,6 +3,7 @@ import HeroSecton from "./components/HeroSection.jsx"
 import AboutPage from "./components/About.jsx"
 import Services from "./components/Services.jsx"
 import Skills from "./components/Skills.jsx"
+import Contacts from "./components/Contacts.jsx"
 
 function App() {
   
@@ -15,6 +16,7 @@ function App() {
  <AboutPage/>
   <Services/>
   <Skills/>
+  <Contacts/>
    </div>
  
       
