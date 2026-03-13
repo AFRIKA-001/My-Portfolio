@@ -40,7 +40,7 @@ export default function Contacts() {
                     <label className='text-white py-5'>Message</label>
                     <textarea className=' bg-white/10 border-white/10 text-white/90 border rounded' type="textarea" placeholder='what is your project idea'>
                     </textarea>
-                    <button className='w-20 my-10 border border-white/10  rounded font-bold text-white hover:bg-amber-300/10 active:bg-amber-200/20 '>Submit</button>
+                    <button className='w-60  my-10 border border-white/10  rounded font-bold text-white hover:bg-amber-300/10 active:bg-amber-200/20 '>Submit</button>
                 </div>
 
                 {/* input fields ends here */}

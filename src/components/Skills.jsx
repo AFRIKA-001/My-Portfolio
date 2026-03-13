@@ -8,7 +8,7 @@ import LinuxIcon from '../public/linux.svg'
 
 export default function Skills() {
     return <>
-        <section >
+        <section className=" ">
             <h1 className="text-6xl text-center mb-10 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-[#ad03fc] to-[#ff7b07]">Technical Skills</h1>
             <p className="text-xl  text-w-2xl text-center  text-white font-medium leading-relaxed">here are some of the tools and tecnologies i use to bring ideas to life </p>
             <div className="flex justify-center  p-8 gap-5 ">
