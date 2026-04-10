@@ -10,13 +10,13 @@ export default function Contacts() {
     const ParaStyles = " flex gap-4 px-4 py-5 text-white font-medium "
     return <>
 
-        <h1 className='text-6xl text-center my-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-[#ad03fc] to-[#ff7b07]'>Get In Touch</h1>
+        <h1 className='text-6xl text-center my-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'>Get In Touch</h1>
         <section className='mb-30  '>
 
             <div className='grid grid-cols-2'>
 
                 <div className='px-10'>
-                    <h3 className='text-5xl text-start mx-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-[#ad03fc] to-[#ff7b07]'>Let's Talk</h3>
+                    <h3 className='text-5xl text-start mx-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-200 to-indigo-600'>Let's Talk</h3>
                     <p className='text-xl max-w-xl px-4 py-20 text-white font-medium leading-relaxed'>
                         I'm currently accepting new freelance opportunities.
                         If you're looking for a dedicated developer to help with your next build,

@@ -9,7 +9,7 @@ import LinuxIcon from '../public/linux.svg'
 export default function Skills() {
     return <>
         <section className=" ">
-            <h1 className="text-6xl text-center mb-10 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-[#ad03fc] to-[#ff7b07]">Technical Skills</h1>
+            <h1 className="text-6xl text-center mb-10 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600">Technical Skills</h1>
             <p className="text-xl  text-w-2xl text-center  text-white font-medium leading-relaxed">here are some of the tools and tecnologies i use to bring ideas to life </p>
             <div className="flex justify-center  p-8 gap-5 ">
 
@@ -46,10 +46,8 @@ export default function Skills() {
                     <img className="w-10 h-10 bg-transparent invert" src={LinuxIcon} alt="Linux icon" />
                     <h3 className="text-white text-2xl">-Linux</h3>
                 </div>
-
-
-
             </div>
+             
         </section>
 
     </>

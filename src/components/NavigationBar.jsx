@@ -1,20 +1,36 @@
 // import jahaImg from '../public/jaha-logo.png'
+// import { useState} from "react"
+import { Link } from 'react-router-dom'
 
 export default function NavigationBar(){
+    // const [isOpen,setIsOpen]=useState(<NavigationBar/>);
+
+    // if(isOpen){
+    //     setIsOpen(prevState=>({
+    //         ...prevState,
+    //         navBar:''
+    //     }))
+    // }
     const linkStyles="rounded active:bg-stone-600 text-white hover:text-slate-50 h-8 transition-all duration-300 hover:translate-x-3  hover:bg-[#1E1E1E]"
     return<>
     <section 
         className="fixed top-0 z-50 w-full h-22 bg-[#0a132b] flex text-xl font-bold content-evenly ">
-        <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-[#B82FF6] to-[#EE8425] font-bold text-4xl p-8"><span className="text-5xl">G</span>abriel</h1>
+        <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-lime-400 to-emerald-600 font-bold text-4xl p-8 from-cyan-500 to-indigo-600"><span className="text-5xl">G</span>abriel</h1>
         {/* <img className="h-15 w-25 mx-8 my-4 rounded-2xl" src={jahaImg} alt="" /> */}
         <ul className="flex  p-4 my-4 mx-auto space-x-15 ">
-             <li className={linkStyles} >Home</li>   
-               <li className={linkStyles}  >About</li> 
-                <li className={linkStyles} >Services</li>
+             <li className={linkStyles} >
+                <Link to="/home">Home</Link>
+                </li>   
+
+               <li className={linkStyles}  >
+               About</li> 
+                <li className={linkStyles} >
+                 Services
+                  </li>
         <li className={linkStyles} >Skills</li>
         <li className={linkStyles} >Project</li>
         <li className={linkStyles} >Contacts</li>
-        <button className='h-10 hover:bg-[red] bg-red-100 px-4 mx-8 text-xl active:bg-red-900 rounded-2xl'>connect</button>     
+        <button className='h-10 hover:text-cyan-300 [bg-gradient-to-l from-cyan-500 to-indigo-600] bg-cyan-600 px-4 mx-8 text-xl active:bg-red-900/10 rounded-2xl'>connect</button>     
 </ul>
       
     </section>
