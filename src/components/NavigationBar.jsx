@@ -8,7 +8,8 @@ export default function NavigationBar() {
     return <>
         <section
             className="fixed top-0 z-50 w-full h-15 bg-[#0a132b] flex items-center font-bold content-evenly ">
-            <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-lime-400 to-emerald-600 font-bold text-4xl p-8 from-cyan-500 to-indigo-600"><span className="text-5xl">G</span>abriel</h1>
+            <h1 className="text-transparent bg-clip-text bg-gradient-to-l from-lime-400 to-emerald-600 font-bold text-4xl p-8 from-cyan-500 to-indigo-600">
+                <Link to="/"><span className="text-5xl">G</span>abriel</Link></h1>
             <ul className="flex  mx-auto gap-5 items-center  ">
                 <li className={linkStyles} >
                     <Link to="/">Home</Link>
