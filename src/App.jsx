@@ -9,6 +9,7 @@ import Skills from "./components/Skills.jsx"
 import Contacts from "./components/Contacts.jsx"
 import Footer from "./components/footer.jsx"
 import RootLayout from "./components/RootLayout.jsx"
+import Projects from "./components/projects.jsx"
 
 const router = createBrowserRouter([
 
@@ -20,7 +21,8 @@ const router = createBrowserRouter([
   {path:'/services', element:<Services/>},
   {path:'/skills', element:<Skills/>},
   {path:'/contacts', element:<Contacts/>},
-  {path:'/footer', element:<Footer/>}
+  {path:'/footer', element:<Footer/>},
+  {path:'/projects',element:<Projects/>}
     ]
 
    }

@@ -25,7 +25,7 @@ export default function NavigationBar() {
                     <Link to="/skills">Skills</Link>
                 </li>
                 <li className={linkStyles} >
-                    <Link to="/projects">Project</Link>
+                    <Link to="/projects">Projects</Link>
                 </li>
                 <li className={linkStyles} >
                     <Link to="/contacts">Contacts</Link>
