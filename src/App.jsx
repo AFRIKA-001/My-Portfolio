@@ -18,13 +18,14 @@ const router = createBrowserRouter([
     element:<RootLayout/>,
     errorElement:<ErrorMessage/>,
     children:[
-{path:'/', element:<HeroSecton/>},   
+{index:true, element:<HeroSecton/>},   
   {path:'/about', element:<AboutPage/>},
   {path:'/services', element:<Services/>},
   {path:'/skills', element:<Skills/>},
   {path:'/contacts', element:<Contacts/>},
   {path:'/footer', element:<Footer/>},
-  {path:'/projects',element:<Projects/>}
+  {path:'/projects',element:<Projects/>},
+  {path:'*', element:<ErrorMessage/>}
     ]
 
    }
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
   
 
 
-])
+]);
 
 
 
