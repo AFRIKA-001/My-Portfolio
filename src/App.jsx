@@ -10,11 +10,13 @@ import Contacts from "./components/Contacts.jsx"
 import Footer from "./components/footer.jsx"
 import RootLayout from "./components/RootLayout.jsx"
 import Projects from "./components/projects.jsx"
+import ErrorMessage from "./components/ErrorPage.jsx"
 
 const router = createBrowserRouter([
 
    {path:'/',
     element:<RootLayout/>,
+    errorElement:<ErrorMessage/>,
     children:[
 {path:'/', element:<HeroSecton/>},   
   {path:'/about', element:<AboutPage/>},
