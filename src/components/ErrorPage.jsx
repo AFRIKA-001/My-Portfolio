@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 function ErrorMessage(){
     return(
 <>
-<NavigationBar/>
+
 <div className="my-20">
     <PlugZap className="mx-auto text-red-600 animate-pulse h-8 w-8 lg:h-16 lg:w-16" />
     <h1 className=" text-lg lg:text-5xl text-red-600 text-center pb-4 lg:pb-10">404 - Page Not Found</h1>
