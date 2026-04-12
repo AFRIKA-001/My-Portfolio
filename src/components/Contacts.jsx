@@ -10,7 +10,7 @@ export default function Contacts() {
     const ParaStyles = " flex gap-4 px-4 py-5 text-white font-medium "
     return <>
 
-        <h1 className='lg:text-6xl text-3xl text-center pt-25 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'>Get In Touch</h1>
+        <h1 className='lg:text-6xl text-3xl text-center lg:pt-25 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'>Get In Touch</h1>
         <section  className='font-sm '>
 
             <div className='grid lg:grid-cols-2'>
@@ -24,7 +24,7 @@ export default function Contacts() {
                     </p>
                     <p className={ParaStyles}><img className={iconStyles} src={EmailImg} />shikukugabriel06@gmail.com   </p>
                     <p className={ParaStyles}> <img className={iconStyles} src={phoneImg} /> +254714058073</p>
-                    <p p className={ParaStyles}><img className={iconStyles} src={LocatImg} />  Nairobi,Kenya</p>
+                    <p className={ParaStyles}><img className={iconStyles} src={LocatImg} />  Nairobi, Kenya</p>
                 </div>
                 {/* input filed starts here */}
                 <div className='grid grid-rows-3'>
@@ -40,7 +40,7 @@ export default function Contacts() {
                     <label className='text-white py-5 uppercase'>Message</label>
                     <textarea className='pl-1 bg-white/10 border-white/10 text-white/90 border rounded' type="textarea" placeholder='what is your project idea' required>
                     </textarea>
-                    <button type='button' className='w-60  my-10 border border-white/10  rounded font-bold text-white hover:bg-amber-300/10 active:bg-amber-200/20 ' >Submit</button>
+                    <button type='button' className='w-60 my-10 border border-white/10  rounded font-bold text-white hover:bg-amber-300/10 active:bg-amber-200/20 ' >Submit</button>
                 </div>
                 
                 {/* input fields ends here */}
