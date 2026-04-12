@@ -5,11 +5,11 @@
   export default function AboutPage() {
 
     return <>
-    <section className='bg-[#0B1120] py-25 items-center '>
+    <section className='bg-[#0B1120]  lg:pb-25 items-center '>
         
-           <h1 className='lg:text-6xl text-2xl text-center mb-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'><span className='font-bold lg:text-8xl'>A</span>bout Me</h1>
-           <div className=' my-10  grid grid-cols-1 md:grid-cols-2  items-center'>
-        <img  className=' flex mx-auto rounded-full w-70 aspect-square object-cover h-70 object-contain'src={ProfilePic} alt="Gabriel" />
+           <h1 className='lg:text-6xl text-2xl text-center mb-2 lg:mb-20 font-bold  text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'><span className='font-bold lg:text-8xl'>A</span>bout Me</h1>
+           <div className=' my-4 lg:my-10  grid grid-cols-1 md:grid-cols-2  items-center'>
+        <img  className=' flex mx-auto rounded-full w-70 h-70 aspect-square object-cover 'src={ProfilePic} alt="Gabriel's logo" />
         <p className='text-xl flex mx-auto px-4 pt-10 text-white font-medium leading-relaxed'>
             Hi! I'm Gabriel. I am a Computer Science student and a self-driven Frontend Developer currently specializing in the MERN stack. My development philosophy is rooted in project-based learning. I believe the best way to master a tool like React is by building real-world solutions.
 
