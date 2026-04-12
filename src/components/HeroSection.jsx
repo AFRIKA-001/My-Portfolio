@@ -3,8 +3,8 @@ import { Link } from "react-router-dom"
 
 export default function HeroSecton(){
     return<>
-    <section className="text-2xl text-center flex flex-col justify-center my-25">
-         <img className="h-60 w-60 flex mx-auto  my-16 rounded-full aspect-square object-cover" src={ProfImg} alt="" />
+    <section className="text-2xl text-center flex flex-col justify-center my-4 lg:mb-20">
+         <img className="h-60 w-60 flex mx-auto  lg:my-1 rounded-full aspect-square object-cover" src={ProfImg} alt="" />
   <strong><h1 className="lg:text-4xl text-slate-50 leading-relaxed font-serrif">Hi,I'm <span className="font-bold text-xl lg:text-2xl  text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-600"> Shikuku Gabriel</span>,a Frontend Developer based in Kenya. </h1></strong> 
    <p className="text-emerald-100 leading-relaxed lg:text-3xl">I am a junior frontend developer from Nairobi,Kenya dealing with <span className="text-white">HTML,CSS,JavaScript ,React.js,Next.js and Tailwindcss</span> </p>
    {/* <div className="p-20  space-x-9">

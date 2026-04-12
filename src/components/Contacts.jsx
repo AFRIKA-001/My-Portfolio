@@ -34,7 +34,7 @@ export default function Contacts() {
 
 
                     <label className='text-white pt-15 uppercase font-mono '>Email Address</label>
-                    <input className='h-10 pl-1 text-xl bg-white/10 border-white/10 text-white/90 border rounded' type="email" placeholder='johndoe@gmail.com' required />
+                    <input className='h-10 pl-1 text-xl   lg:w-full bg-white/10 border-white/10 text-white/90 border rounded' type="email" placeholder='johndoe@gmail.com' required />
 
 
                     <label className='text-white py-5 uppercase'>Message</label>

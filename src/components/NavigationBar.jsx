@@ -39,7 +39,7 @@ export default function NavigationBar() {
                     className="lg:hidden p-2 text-white"
                     aria-label="Toggle Menu"
                 >
-                    {isOpen ? <X size={32} /> : <Menu size={32} />}
+                    {isOpen ? <X className='text-blue-600' size={32} /> : <Menu  size={32} />}
                 </button>
             </div>
 
