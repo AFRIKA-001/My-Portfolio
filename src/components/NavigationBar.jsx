@@ -25,8 +25,8 @@ export default function NavigationBar() {
                     <li className={linkStyles}><Link to="/">Home</Link></li>
                     <li className={linkStyles}><Link to="/about">About</Link></li>
                     <li className={linkStyles}><Link to="/services">Services</Link></li>
-                    <li className={linkStyles}><Link to="/projects">Projects</Link></li>
                     <li className={linkStyles}><Link to="/skills">Skills</Link></li>
+                     <li className={linkStyles}><Link to="/projects">Projects</Link></li>
                     <li className={linkStyles}><Link to="/contacts">Contacts</Link></li>
                     <button className='bg-cyan-600 hover:bg-cyan-500 px-4 py-1 text-xl rounded-2xl transition-colors'>
                         <Link to="/contacts">Resume</Link>
@@ -48,9 +48,9 @@ export default function NavigationBar() {
                 <ul className="lg:hidden flex flex-col bg-[#0a132b] border-t border-slate-700 p-4 gap-4">
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/">Home</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/about">About</Link></li>
-                    <li className={linkStyles} onClick={toggleMenu}><Link to="/projects">Projects</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/services">Services</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/skills">Skills</Link></li>
+                    <li className={linkStyles} onClick={toggleMenu}><Link to="/projects">Projects</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/contacts">Contacts</Link></li>
                     <button className='bg-cyan-600 text-white px-4 py-2 rounded-2xl'>
                         Resume
