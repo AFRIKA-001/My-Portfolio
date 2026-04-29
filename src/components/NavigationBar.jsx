@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // Changed MenuIcon to Menu
+import resume from '../public/SchoolPulse_BusinessPlan_v1.0.pdf'
 
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -28,7 +29,7 @@ export default function NavigationBar() {
                      <li className={linkStyles}><Link  to="/projects">Projects</Link></li>
                     <li className={linkStyles}><Link   to="/contacts">Contacts</Link></li>
                     <button className='bg-cyan-600 hover:bg-cyan-500 px-4 py-1 text-xl rounded-2xl transition-colors'>
-                        <Link to="/contacts">Resume</Link>
+                        <a href='resume' download='gabriel-wafula_resume.pdf'>Resume</a>
                     </button>
                 </ul>
 
@@ -51,8 +52,8 @@ export default function NavigationBar() {
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/skills">Skills</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/projects">Projects</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/contacts">Contacts</Link></li>
-                    <button className='bg-cyan-600 text-white px-4 py-2 rounded-2xl'>
-                        Resume
+                    <button className='bg-cyan-600 cursor-pointer active:bg-cyan-800 text-white px-4 py-2 rounded-2xl'>
+                        <a href={resume} download='gabriel_wafula_resume.pdf'>Resume</a>
                     </button>
                 </ul>
             )}
