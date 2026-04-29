@@ -8,7 +8,7 @@ export default function Footer (){
     <>
    <footer>
 
-<div className="flex gap-4 justify-center my-10 items-center text-sm lg:text-xl">
+<div className="flex gap-4 justify-center mb-4 items-center text-sm lg:text-xl">
     <p className="text-white/60  lg:text-xl">@2026 Shikuku Gabriel.All rights reserved.</p>
     <a className="text-pink-600" href="https://www.instagram.com/ddyscot_jatelo/"> <  BsInstagram/> </a>
     <a className="text-blue-700 " href="https://www.linkedin.com/in/gabriel-wafula"> <BsLinkedin/></a>

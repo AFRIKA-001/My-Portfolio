@@ -1,4 +1,4 @@
- import ProfilePic from '../public/myface2.png' 
+ import ProfilePic from '../public/output.jpg' 
   
   
   

@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import jahaImg from "../public/jahaImage.png"
+import jahaImg from "../public/jahaImage.jpg"
 
 function projects() {
   return (
 <>
-<section >
+<section className='mb-40' >
      <h1 className=' mt-4 lg:mt-20 text-center text-xl lg:text-4xl text-cyan-300 lg:text-blue-700 font-serif  '>My  Latest works</h1>
        
   

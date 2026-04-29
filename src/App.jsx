@@ -18,6 +18,7 @@ function App() {
  <AboutPage/>
   <Services/>
   <Skills/>
+  <Projects/>
   <Contacts/>
   <Footer/>  
 
