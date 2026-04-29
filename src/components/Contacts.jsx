@@ -85,7 +85,7 @@ export default function Contacts() {
                                 value={formData.email} 
                                 className='h-10 pl-2 w-full bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500' 
                                 type="email" 
-                                placeholder='johndoe@gmail.com' 
+                                placeholder='gabriel@gmail.com' 
                                 required 
                             />
 
