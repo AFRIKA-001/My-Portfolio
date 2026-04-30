@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 body{
-  background-color: #0B1120;
+  background-image:url(src/public/grunge-abstract-metal-background.jpg);
 }

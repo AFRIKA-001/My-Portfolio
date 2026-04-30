@@ -5,7 +5,7 @@
   export default function AboutPage() {
 
     return <>
-    <section className='bg-[#0B1120] mb-10 items-center '>
+    <section className='mb-10 items-center '>
         
            <h1 className='lg:text-6xl text-4xl font-serif text-center mb-6 lg:mb-20   text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'><span className='font-bold lg:text-8xl'>A</span>bout Me</h1>
            <div className=' my-4 lg:my-10  grid grid-cols-1 md:grid-cols-2  items-center'>

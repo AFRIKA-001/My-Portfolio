@@ -14,10 +14,10 @@ import LinuxIcon from '../public/linux.svg'
 export default function Skills() {
     return <>
       
-        <section className="pt-15 mb-80 bg-[#0B1120]">
+        <section className="pt-15 lg:mb-80 ">
                  <h1 className="lg:text-6xl text-4xl font-serif text-center mb-10 text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600">Technical Skills</h1>
             <p className="text-xl font-serif text-w-2xl text-center  text-white font-medium leading-relaxed">here are some of the tools and tecnologies i use to bring ideas to life </p>
-            <div className=" grid grid-cols-2 lg:grid-cols-3 pt-10  max-w-prose  pl-2 mx-auto space-y-6  space-x-1 lg:space-x-10">
+            <div className=" grid grid-cols-2 lg:grid-cols-3 pt-10  justify-items-center  space-y-6   ">
 
                 <div className="flex justify-center h-30 w-40 lg:w-55 items-center hover:-translate-y-4 hover:shadow-xl hover:border-cyan-400 rounded bg-[#1E1E1E] border border-white/10 shadow-cyan-200/20 transition-all duration-500 ">
                     <img className="w-10 h-10 text-blue-700 object-contain" src={ReactIcon} alt="react icon" />

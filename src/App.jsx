@@ -13,14 +13,14 @@ function App() {
 
   return (
     <>
-   <div>
+   <div >
   <HeroSecton/>
  <AboutPage/>
   <Services/>
   <Skills/>
   <Projects/>
   <Contacts/>
-  <Footer/>  
+ 
 
    </div>
  

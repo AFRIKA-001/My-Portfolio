@@ -2,6 +2,7 @@
 import EmailImg from '../public/gmail.svg'
 import phoneImg from '../public/phone.svg'
 import LocatImg from '../public/map-pin.svg'
+import Footer from './footer'
 import { supabase } from '../../supabaseClient'
 import { useState } from 'react'
 
@@ -52,10 +53,10 @@ export default function Contacts() {
     return (
         <>
             <h1 className='lg:text-6xl text-4xl text-center lg:pt-25 font-serif text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'>Get In Touch</h1>
-            <section className='font-sm'>
+            <section>
                 <div className='grid lg:grid-cols-2'>
                     <div className='px-4 items-center'>
-                        <h3 className='lg:text-5xl text-xl pt-4 lg:pt-8  lg:mx-20 font-serif animate-pulse text-transparent bg-clip-text bg-gradient-to-l from-cyan-200 to-indigo-600'>Let's Talk</h3>
+                        <h3 className='lg:text-5xl text-xl pt-4 lg:pt-8 text-center font-serif animate-pulse text-transparent bg-clip-text bg-gradient-to-l from-cyan-200 to-indigo-600'>Let's Talk</h3>
                         <p className='text-xl max-w-prose lg:px-4 py-4 lg:py-20 text-white font-serif leading-relaxed'>
                             I'm currently accepting new freelance opportunities.
                             If you're looking for a dedicated developer to help with your next build,
@@ -109,6 +110,8 @@ export default function Contacts() {
                         </form>
                     </div>
                 </div>
+
+                <Footer/>
             </section>
         </>
     );

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // Changed MenuIcon to Menu
 import resume from '../public/SchoolPulse_BusinessPlan_v1.0.pdf'
 
+
 export default function NavigationBar() {
     const [isOpen, setIsOpen] = useState(false);
 
@@ -13,7 +14,7 @@ export default function NavigationBar() {
     const linkStyles = "rounded active:bg-stone-600 text-white hover:text-slate-50 transition-all duration-300 px-4 text-lg font-medium hover:bg-[#1E1E1E]";
 
     return (
-        <header className="sticky top-0 z-50 w-full bg-[#0a132b] text-white">
+        <header className="sticky top-0 z-50 w-full  text-white bg-white/10 backdrop-blur-md border-b border-white/20">
             <div className="flex items-center justify-between px-8 h-20">
                 {/* Logo */}
                 <h1 className="text-transparent font-serif animate-pulse bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600 font-bold text-2xl lg:text-4xl">
