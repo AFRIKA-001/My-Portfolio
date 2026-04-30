@@ -46,14 +46,14 @@ export default function NavigationBar() {
 
             {/* Mobile Menu Dropdown */}
             {isOpen && (
-                <ul className="lg:hidden flex flex-col bg-[#0a132b] border-t border-slate-700 p-4 gap-4">
+                <ul className="lg:hidden flex flex-col bg-[#070606] border-t border-slate-700 p-4 gap-4">
                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/">Home</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/about">About</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/services">Services</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/skills">Skills</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/projects">Projects</Link></li>
                     <li className={linkStyles} onClick={toggleMenu}><Link to="/contacts">Contacts</Link></li>
-                    <button className='bg-cyan-600 cursor-pointer active:bg-cyan-800 text-white px-4 py-2 rounded-2xl'>
+                    <button className='bg-cyan-600 cursor-pointer active:bg-cyan-800 text-white px-4 py-2 rounded-2xl active:scale-90'>
                         <a href={resume} download='gabriel_wafula_resume.pdf'>Resume</a>
                     </button>
                 </ul>
