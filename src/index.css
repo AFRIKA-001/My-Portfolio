@@ -1,5 +1,5 @@
 @import "tailwindcss";
 
 body{
-  background-image:url(src/public/grunge-abstract-metal-background.jpg);
+  background-image:url('https://media.istockphoto.com/id/1315800229/vector/abstract-futuristic-background-with-hexagons-dark-sci-fi-hi-tech-wallpaper-with-red-lights.jpg?s=612x612&w=0&k=20&c=-Da69_kuP3MDcra60G5P024aOQ59RxeJ0Qdjw1uVXmw=');
 }
