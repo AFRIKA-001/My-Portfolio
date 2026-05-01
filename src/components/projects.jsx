@@ -36,25 +36,9 @@ function projects() {
             live project
         </Link>
         </button>
-
     </div>
-
-
-
-
-
    </div>
-
-
-    
-
-
-
-
-
 </section>
- 
-
 </>
   )
 }

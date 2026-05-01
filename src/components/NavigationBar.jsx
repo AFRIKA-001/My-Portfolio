@@ -11,7 +11,7 @@ export default function NavigationBar() {
         setIsOpen(!isOpen);
     };
 
-    const linkStyles = "rounded active:bg-stone-600 text-white hover:text-slate-50 transition-all duration-300 px-4 text-lg font-medium hover:bg-[#1E1E1E]";
+    const linkStyles = "rounded active:bg-stone-600 text-white hover:text-slate-50 transition-all duration-300 px-4 text-lg font-medium hover:bg-[#1E1E1E] hover:underline";
 
     return (
         <header className="sticky top-0 z-50 w-full  text-white bg-white/10 backdrop-blur-md border-b border-white/20">
