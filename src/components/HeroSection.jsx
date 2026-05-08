@@ -1,4 +1,4 @@
-import  htmlImage from '../public/HtmlImageIcon.svg'
+import  htmlImage from '../../public/HtmlImageIcon.svg'
 import { Link } from "react-router-dom"
 
 

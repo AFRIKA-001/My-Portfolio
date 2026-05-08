@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react'; // Changed MenuIcon to Menu
-import resume from '../public/SchoolPulse_BusinessPlan_v1.0.pdf'
+import resume from '../../public/gabriel_wafula_resume.pdf'
 
 
 export default function NavigationBar() {

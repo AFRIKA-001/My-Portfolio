@@ -1,7 +1,7 @@
 
-import EmailImg from '../public/gmail.svg'
-import phoneImg from '../public/phone.svg'
-import LocatImg from '../public/map-pin.svg'
+import EmailImg from '../../public/gmail.svg'
+import phoneImg from '../../public/phone.svg'
+import LocatImg from '../../public/map-pin.svg'
 import Footer from './footer'
 import { supabase } from '../../supabaseClient'
 import { useState } from 'react'

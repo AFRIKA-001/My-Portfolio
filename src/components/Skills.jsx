@@ -1,9 +1,9 @@
-import ReactIcon from "../public/react.svg"
-import NextIcon from '../public/nextdotjs.svg'
-import TailwindIcon from '../public/tailwindcss.svg'
-import GitIcon from '../public/git.svg'
-import GithubIcon from '../public/github.svg'
-import LinuxIcon from '../public/linux.svg'
+import ReactIcon from "../../public/react.svg"
+import NextIcon from '../../public/nextdotjs.svg'
+import TailwindIcon from '../../public/tailwindcss.svg'
+import GitIcon from '../../public/git.svg'
+import GithubIcon from '../../public/github.svg'
+import LinuxIcon from '../../public/linux.svg'
 // // import SqlIcon from '../public/mysql.svg'
 // import PostgresqlIcon from '../public/postgresql.svg'
 // import HtmlIcon from '../public/html5.svg'
