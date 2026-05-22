@@ -1,24 +1,100 @@
- import ProfilePic from '../../public/output.jpg' 
-  
-  
-  
-  export default function AboutPage() {
+import ProfilePic from "../../public/output.jpg";
 
-    return <>
-    <section className='mb-10  '>
-        
-           <h1 className='lg:text-6xl text-4xl font-serif text-center mb-6 lg:mb-20   text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600'><span className='font-bold lg:text-8xl'>A</span>bout Me</h1>
-           <div className=' my-4 lg:my-10  grid grid-cols-1 md:grid-cols-2  items-center'>
-        <img  className=' flex mx-auto rounded-full w-50 h-50 lg:w-70 lg:h-70 aspect-square object-cover 'src={ProfilePic} alt="Gabriel's logo" />
-        <p className='text-xl flex text-center font-serif lg:pr-9 pt-10 text-white font-medium leading-relaxed   border-white '>
-            Hi! I'm Gabriel. I am a Computer Science student and a self-driven Frontend Developer currently specializing in the MERN stack. My development philosophy is rooted in project-based learning. I believe the best way to master a tool like React is by building real-world solutions.
+export default function AboutPage() {
+  return (
+    <section className="relative px-6 py-24 overflow-hidden">
 
-            I spend my time exploring the latest in web performance and Cybersecurity, ensuring that the sites I build aren't just pretty, but secure and optimized. I'm always looking for new challenges that push me to write cleaner, more efficient code.
+      {/* Background Glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/10 blur-3xl rounded-full"></div>
+      </div>
+
+      {/* Heading */}
+      <div className="text-center mb-16">
+        <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+          Get To Know Me
         </p>
 
+        <h1 className="text-5xl lg:text-7xl font-bold text-white">
+          About{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+            Me
+          </span>
+        </h1>
+      </div>
+
+      {/* Main Content */}
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+
+        {/* Profile Image */}
+        <div className="flex justify-center">
+          <div className="relative">
+
+            {/* Glow Ring */}
+            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 blur-2xl opacity-30"></div>
+
+            <img
+              className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl"
+              src={ProfilePic}
+              alt="Gabriel profile"
+            />
+          </div>
         </div>
-      
+
+        {/* About Text */}
+        <div className="text-center lg:text-left">
+
+          <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-6">
+            Computer Science Student & MERN Stack Developer
+          </h2>
+
+          <p className="text-slate-300 text-lg leading-relaxed mb-6">
+            Hi! I'm <span className="text-white font-semibold">Gabriel</span>,
+            a self-driven frontend developer passionate about building modern,
+            responsive, and user-friendly web applications.
+          </p>
+
+          <p className="text-slate-300 text-lg leading-relaxed mb-6">
+            My development philosophy is centered around{" "}
+            <span className="text-cyan-400 font-semibold">
+              project-based learning
+            </span>
+            . I believe the best way to master technologies like React and the
+            MERN stack is by solving real-world problems and continuously
+            improving through hands-on experience.
+          </p>
+
+          <p className="text-slate-300 text-lg leading-relaxed">
+            Beyond frontend development, I enjoy exploring{" "}
+            <span className="text-white font-semibold">
+              web performance, backend systems, and cybersecurity
+            </span>{" "}
+            to ensure the applications I build are secure, optimized, and
+            scalable.
+          </p>
+
+          {/* Skills */}
+          <div className="mt-10 flex flex-wrap gap-4 justify-center lg:justify-start">
+
+            {[
+              "React.js",
+              "Next.js",
+              "JavaScript",
+              "Tailwind CSS",
+              "Node.js",
+              "Express.js",
+              "MongoDB",
+            ].map((skill) => (
+              <span
+                key={skill}
+                className="px-5 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 hover:border-cyan-400 hover:text-white transition-all duration-300"
+              >
+                {skill}
+              </span>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
-       
-    </>
+  );
 }
