@@ -1,73 +1,121 @@
-import ReactIcon from "../../public/react.svg"
-import NextIcon from '../../public/nextdotjs.svg'
-import TailwindIcon from '../../public/tailwindcss.svg'
-import GitIcon from '../../public/git.svg'
-import GithubIcon from '../../public/github.svg'
-import LinuxIcon from '../../public/linux.svg'
-// // import SqlIcon from '../public/mysql.svg'
-// import PostgresqlIcon from '../public/postgresql.svg'
-// import HtmlIcon from '../public/html5.svg'
-// import javascriptIcon from '../public/javascript.svg'
-// import superbaseIcon from '../public/supabase.svg'
-
+import ReactIcon from "../../public/react.svg";
+import NextIcon from "../../public/nextdotjs.svg";
+import TailwindIcon from "../../public/tailwindcss.svg";
+import GitIcon from "../../public/git.svg";
+import GithubIcon from "../../public/github.svg";
+import LinuxIcon from "../../public/linux.svg";
+import postgresqlIcon from "../../public/postgresql.svg"
+import MySQLIcon from "../../public/mysql.svg"
+import supabaseIcon from "../../public/supabase.svg"
 
 export default function Skills() {
-    return <>
-      
-        <section className="pt-15 lg:mb-80 ">
-                 <h1 className="lg:text-6xl text-4xl font-serif text-center mb-10 text-transparent bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600">Technical Skills</h1>
-            <p className="text-xl font-serif text-w-2xl text-center  text-white font-medium leading-relaxed">here are some of the tools and tecnologies i use to bring ideas to life </p>
-            <div className=" grid grid-cols-2 lg:grid-cols-3 pt-10  justify-items-center  space-y-6   ">
+  const skills = [
+    {
+      name: "React.js",
+      icon: ReactIcon,
+      invert: false,
+    },
 
-                <div className="flex active:scale-95 justify-center h-30 w-40 lg:w-55 items-center hover:-translate-y-4 hover:shadow-xl hover:border-cyan-400 rounded bg-[#1E1E1E] border border-white/10 shadow-cyan-200/20 transition-all duration-500 ">
-                    <img className="w-10 h-10 text-blue-700 object-contain" src={ReactIcon} alt="react icon" />
-                    <h3 className="text-white text-2xl">-React.js</h3>
-                </div>
+    {
+      name: "Next.js",
+      icon: NextIcon,
+      invert: true,
+    },
 
-                <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-amber-200 rounded hover:-translate-y-4 hover:shadow-2xl bg-[#1E1E1E] border border-white/10 shadow-white/40  duration-500  ">
-                    <img className="w-10  h-10 bg-transparent invert" src={NextIcon} alt="nextjs icon" />
-                    <h3 className="text-white text-2xl">-Next.js</h3>
-                </div>
+    {
+      name: "Tailwind CSS",
+      icon: TailwindIcon,
+      invert: false,
+    },
 
+    {
+      name: "Git",
+      icon: GitIcon,
+      invert: true,
+    },
 
-                <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-cyan-200 rounded bg-[#1E1E1E] border border-white/10 shadow-amber-200/20 transition-all duration-500 hover:shadow-2xl hover:-translate-y-4">
-                    <img className="w-10 h-10 " src={TailwindIcon} alt="Tailwind icon" />
-                    <h3 className="text-white text-xl">-Tailwind css</h3>
-                </div>
+    {
+      name: "GitHub",
+      icon: GithubIcon,
+      invert: true,
+    },
 
+    {
+      name: "Linux",
+      icon: LinuxIcon,
+      invert: true,
+    },
+    {
+        name:"PostgreSQL",
+        icon:postgresqlIcon,
+        invert:true
+    },
+    {
+        name:"MySQL",
+        icon:MySQLIcon,
+        invert:true
+    },
+    {
+        name:"Supabase",
+        icon:supabaseIcon,
+        invert:true
+    },
 
-                <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-orange-600 rounded bg-[#1E1E1E] border border-white/10 shadow-amber-100/20 hover:shadow-2xl hover:-translate-y-4 transition-all duration-500">
-                    <img className="w-10 h-10 bg-transparent invert" src={GitIcon} alt="Git icon" />
-                    <h3 className="text-white text-2xl">-Git</h3>
-                </div>
+  ];
 
+  return (
+    <section className="relative px-6 py-24 overflow-hidden">
 
-                <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-orange-600 rounded bg-[#1E1E1E] border border-white/10 shadow-amber-200/20 hover:shadow-2xl transition-all duration-500 hover:-translate-y-4">
-                    <img className="w-10 h-10 bg-transparent invert" src={GithubIcon} alt="Github icon" />
-                    <h3 className="text-white text-2xl">-Github</h3>
-                </div>
+      {/* Background Glow */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+      </div>
 
+      {/* Heading */}
+      <div className="text-center mb-20">
 
-                <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-cyan-400 rounded bg-[#1E1E1E] border border-white/10 shadow-amber-50/20 hover:shadow-2xl hover:-translate-y-4 transistion-all duration-500">
-                    <img className="w-10 h-10 bg-transparent invert" src={LinuxIcon} alt="Linux icon" />
-                    <h3 className="text-white text-2xl">-Linux</h3>
-                </div>
-                
-                {/* <div className="flex justify-center items-center h-30 w-40 lg:w-55 hover:border-cyan-400 rounded bg-[#1E1E1E] border border-white/10 shadow-amber-50/20 hover:shadow-2xl hover:-translate-y-4 transistion-all duration-500">
-                    <img className="w-10 h-10 bg-transparent invert" src={HtmlIcon} alt="HTML icon" />
-                    <h3 className="text-white text-2xl">-HTML</h3>
-                </div>
-                <div>css</div>
-                <div>js</div>
-                <div>superbase</div>
-                <div>sql</div>
-                <div>postgresql</div> */}
+        <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+          My Tech Stack
+        </p>
 
+        <h1 className="text-5xl lg:text-7xl font-bold text-white">
+          Technical{" "}
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+            Skills
+          </span>
+        </h1>
 
-            </div>
-             
-        </section>
+        <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          Here are some of the technologies and tools I use to build modern,
+          scalable, and high-performance web applications.
+        </p>
+      </div>
 
-    </>
+      {/* Skills Grid */}
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-8">
 
+        {skills.map((skill, index) => (
+          <div
+            key={index}
+            className="group flex flex-col items-center justify-center gap-5 h-44 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition-all duration-300 shadow-xl"
+          >
+
+            {/* Icon */}
+            <img
+              className={`w-14 h-14 object-contain transition-transform duration-300 group-hover:scale-110 ${
+                skill.invert ? "invert" : ""
+              }`}
+              src={skill.icon}
+              alt={skill.name}
+            />
+
+            {/* Skill Name */}
+            <h3 className="text-white text-xl lg:text-2xl font-semibold">
+              {skill.name}
+            </h3>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
 }
