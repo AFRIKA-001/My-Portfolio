@@ -39,7 +39,7 @@ export default function Projects() {
 
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+        <div className="absolute top-50 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-cyan-500/10 blur-3xl rounded-full"></div>
       </div>
 
       {/* Heading */}
@@ -63,12 +63,12 @@ export default function Projects() {
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
 
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group rounded-3xl overflow-hidden bg-slate-900/60 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-3 shadow-2xl"
+            className="group rounded-3xl overflow-hidden bg-slate-900/10 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-3 shadow-2xl"
           >
 
             {/* Project Image */}
@@ -99,7 +99,7 @@ export default function Projects() {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-sm hover:border-cyan-400 transition"
+                    className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-sm hover:border-cyan-400 transition duration-300"
                   >
                     {tech}
                   </span>
@@ -107,7 +107,7 @@ export default function Projects() {
               </div>
 
               {/* Buttons */}
-              <div className="flex gap-4">
+              <div className="flex">
 
                 <a
                   href={project.live}
