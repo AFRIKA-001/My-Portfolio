@@ -1,6 +1,6 @@
-import { ExternalLink, Github } from "lucide-react";
-import JahaFoodsImg from "../../public/JahaFoods.jpg";
-import JahaShoe from "../../public/JahaShoes.jpg";
+import { ExternalLink } from "lucide-react";
+import JahaFoodsImg from "/JahaFoods.jpg";
+import JahaShoe from "/JahaShoes.jpg";
 
 export default function Projects() {
   const projects = [
