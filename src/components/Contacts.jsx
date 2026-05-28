@@ -1,11 +1,6 @@
 import { useState } from "react";
-import {
-  Mail,
-  Phone,
-  MapPin,
-  SendHorizonal,
-} from "lucide-react";
-import Footer from "./footer.jsx"
+import { Mail, Phone, MapPin, SendHorizonal } from "lucide-react";
+import Footer from "./footer.jsx";
 import { supabase } from "../../supabaseClient";
 
 export default function Contacts() {
@@ -17,41 +12,45 @@ export default function Contacts() {
 
   const [loading, setLoading] = useState(false);
 
+  //goes to the input fields
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
-
+  //goes to the form on the submit prop
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     setLoading(true);
+    try {
+      const { error } = await supabase
+        .from("form_submissions")
+        .insert([formData]);
 
-    const { error } = await supabase
-      .from("form_submissions")
-      .insert([formData]);
+      if (error) {
+        alert("Something went wrong:Try again later (network issues) " + error.message);
+      } else {
+        alert("Message sent successfully!");
 
-    if (error) {
-      alert("Something went wrong: " + error.message);
-    } else {
-      alert("Message sent successfully!");
-
-      setFormData({
-        name: "",
-        email: "",
-        message: "",
-      });
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      }
+    } catch (error) {
+      console.error("there was a problem sending data " + error);
+    }finally{
+      setLoading(false);
     }
 
-    setLoading(false);
   };
 
   return (
     <>
       <section className="relative px-6 py-24 overflow-hidden">
-
         {/* Background Glow */}
         <div className="absolute inset-0 -z-10">
           <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
@@ -59,8 +58,7 @@ export default function Contacts() {
 
         {/* Heading */}
         <div className="text-center mb-20">
-
-          <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+          <p className="uppercase tracking-[0.4em] text-cyan-400 text-sm font-semibold mb-4">
             Contact
           </p>
 
@@ -73,16 +71,14 @@ export default function Contacts() {
 
           <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
             I'm currently open to freelance opportunities, collaborations, and
-            exciting frontend projects.
+            exciting frontend projects with backend as a service.
           </p>
         </div>
 
         {/* Main Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Left Side */}
           <div>
-
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
               Let's Build Something Amazing
             </h2>
@@ -95,7 +91,7 @@ export default function Contacts() {
 
             {/* Contact Info */}
             <div className="space-y-6">
-
+              {/*email info */}
               <div className="flex items-center gap-4">
                 <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
                   <Mail className="text-cyan-400" size={24} />
@@ -103,12 +99,11 @@ export default function Contacts() {
 
                 <div>
                   <p className="text-slate-400 text-sm">Email</p>
-                  <p className="text-white">
-                    shikukugabriel06@gmail.com
-                  </p>
+                  <p className="text-white">shikukugabriel06@gmail.com</p>
                 </div>
               </div>
 
+              {/*phone information */}
               <div className="flex items-center gap-4">
                 <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
                   <Phone className="text-cyan-400" size={24} />
@@ -116,12 +111,11 @@ export default function Contacts() {
 
                 <div>
                   <p className="text-slate-400 text-sm">Phone</p>
-                  <p className="text-white">
-                    +254 714 058 073
-                  </p>
+                  <p className="text-white">+254 714 058 073</p>
                 </div>
               </div>
 
+              {/*location information */}
               <div className="flex items-center gap-4">
                 <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
                   <MapPin className="text-cyan-400" size={24} />
@@ -129,9 +123,7 @@ export default function Contacts() {
 
                 <div>
                   <p className="text-slate-400 text-sm">Location</p>
-                  <p className="text-white">
-                    Nairobi, Kenya
-                  </p>
+                  <p className="text-white">Nairobi, Kenya</p>
                 </div>
               </div>
             </div>
@@ -139,12 +131,10 @@ export default function Contacts() {
 
           {/* Right Side Form */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-8 shadow-2xl">
-
             <form onSubmit={handleSubmit} className="space-y-6">
-
               {/* Name */}
               <div>
-                <label className="block text-sm text-slate-300 mb-2">
+                <label className="block uppercase text-sm text-slate-300 mb-2">
                   Full Name
                 </label>
 
@@ -155,13 +145,13 @@ export default function Contacts() {
                   onChange={handleChange}
                   required
                   className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="John Doe"
+                  placeholder="Gabriel Doe"
                 />
               </div>
 
               {/* Email */}
               <div>
-                <label className="block text-sm text-slate-300 mb-2">
+                <label className="block uppercase text-sm text-slate-300 mb-2">
                   Email Address
                 </label>
 
@@ -172,13 +162,13 @@ export default function Contacts() {
                   onChange={handleChange}
                   required
                   className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="john@example.com"
+                  placeholder="gabriel@example.com"
                 />
               </div>
 
               {/* Message */}
               <div>
-                <label className="block text-sm text-slate-300 mb-2">
+                <label className="block uppercase text-sm text-slate-300 mb-2">
                   Message
                 </label>
 
@@ -211,91 +201,7 @@ export default function Contacts() {
       <Footer />
     </>
   );
-} 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 // import EmailImg from '../../public/gmail.svg'
 // import phoneImg from '../../public/phone.svg'
@@ -322,7 +228,7 @@ export default function Contacts() {
 //     const handleSubmit = async (e) => {
 //         e.preventDefault();
 //         setLoading(true);
-        
+
 //         // 1. Destructure error from the supabase call
 //         const { error } = await supabase
 //             .from('form_submissions')
@@ -368,39 +274,39 @@ export default function Contacts() {
 //                     <div className='grid grid-rows-3 justify-items-center'>
 //                         <form onSubmit={handleSubmit} className="w-full max-w-md">
 //                             <label className='text-white block pt-10 uppercase font-mono'>Your Name</label>
-//                             <input 
+//                             <input
 //                                 name="name" // Added name attribute
-//                                 onChange={handleChange} 
-//                                 value={formData.name} 
-//                                 className='my-4 pl-2 h-10 w-full bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500' 
-//                                 type="text" 
-//                                 required 
+//                                 onChange={handleChange}
+//                                 value={formData.name}
+//                                 className='my-4 pl-2 h-10 w-full bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500'
+//                                 type="text"
+//                                 required
 //                             />
 
 //                             <label className='text-white w-full pt-5 uppercase font-mono'>Email Address</label>
-//                             <input 
+//                             <input
 //                                 name="email" // Added name attribute
-//                                 onChange={handleChange} 
-//                                 value={formData.email} 
-//                                 className='h-10 pl-2 w-full bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500' 
-//                                 type="email" 
-//                                 placeholder='gabriel@gmail.com' 
-//                                 required 
+//                                 onChange={handleChange}
+//                                 value={formData.email}
+//                                 className='h-10 pl-2 w-full bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500'
+//                                 type="email"
+//                                 placeholder='gabriel@gmail.com'
+//                                 required
 //                             />
 
 //                             <label className='text-white block pt-5 uppercase font-mono'>Message</label>
-//                             <textarea 
+//                             <textarea
 //                                 name="message" // Added name attribute
-//                                 onChange={handleChange} 
-//                                 value={formData.message} 
-//                                 className='pl-2 w-full h-32 bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500' 
-//                                 placeholder='What is your project idea?' 
+//                                 onChange={handleChange}
+//                                 value={formData.message}
+//                                 className='pl-2 w-full h-32 bg-white/10 border-white/10 text-white border rounded outline-none focus:border-cyan-500'
+//                                 placeholder='What is your project idea?'
 //                                 required
 //                             />
-                            
-//                             <button 
+
+//                             <button
 //                                 type='submit' // Changed to submit
-//                                 disabled={loading} 
+//                                 disabled={loading}
 //                                 className='w-full my-10 py-3 border border-white/10 rounded font-bold text-white hover:bg-white/10 transition-all active:scale-95 disabled:opacity-50'
 //                             >
 //                                 {loading ? 'Submitting...' : 'Submit Form'}

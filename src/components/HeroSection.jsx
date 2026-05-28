@@ -1,5 +1,6 @@
-import htmlImage from "../../public/HtmlImageIcon.svg";
+import htmlImage from "/HtmlImageIcon.svg";
 import { Link } from "react-router-dom";
+
 
 export default function HeroSection() {
   return (
@@ -10,7 +11,7 @@ export default function HeroSection() {
         <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/20 blur-3xl rounded-full"></div>
       </div>
 
-      <div className="max-w-5xl mx-auto text-center">
+      <div className="w-full  mx-auto text-center">
 
         {/* Profile/Icon */}
         <img
@@ -60,7 +61,7 @@ export default function HeroSection() {
         </div>
 
         {/* Tech Stack Pills */}
-        {/* <div className="mt-14 flex flex-wrap justify-center gap-4">
+         <div className="mt-14 flex flex-wrap justify-center gap-4">
 
           {[
             "HTML",
@@ -69,6 +70,7 @@ export default function HeroSection() {
             "React.js",
             "Next.js",
             "Tailwind CSS",
+            "supabase"
           ].map((tech) => (
             <span
               key={tech}
@@ -77,7 +79,7 @@ export default function HeroSection() {
               {tech}
             </span>
           ))}
-        </div> */}
+        </div> 
       </div>
     </section>
   );

@@ -1,4 +1,4 @@
-import ProfilePic from "../../public/output.jpg";
+import ProfilePic from "/output.jpg";
 
 export default function AboutPage() {
   return (
@@ -83,10 +83,10 @@ export default function AboutPage() {
               "Tailwind CSS",
               "Node.js",
               "Express.js",
-              "MongoDB",
-            ].map((skill) => (
+              "PostgreSQL",
+            ].map((skill,i) => (
               <span
-                key={skill}
+                key={i}
                 className="px-5 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 hover:border-cyan-400 hover:text-white transition-all duration-300"
               >
                 {skill}

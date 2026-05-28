@@ -23,12 +23,7 @@ export default function Projects() {
       description:
         "A fashion e-commerce platform featuring responsive layouts, smooth animations, and secure authentication using modern frontend technologies.",
 
-      tech: [
-        "React.js",
-        "Tailwind CSS",
-        "Supabase",
-        "Framer Motion",
-      ],
+      tech: ["React.js", "Tailwind CSS", "Supabase", "Framer Motion"],
 
       live: "https://shoe-cloathing-store.vercel.app/",
     },
@@ -36,7 +31,6 @@ export default function Projects() {
 
   return (
     <section className="relative px-6 py-24 overflow-hidden">
-
       {/* Background Glow */}
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-50 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-cyan-500/10 blur-3xl rounded-full"></div>
@@ -44,7 +38,6 @@ export default function Projects() {
 
       {/* Heading */}
       <div className="text-center mb-20">
-
         <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
           Portfolio
         </p>
@@ -64,13 +57,11 @@ export default function Projects() {
 
       {/* Projects Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
-
         {projects.map((project, index) => (
           <div
             key={index}
             className="group rounded-3xl overflow-hidden bg-slate-900/10 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-3 shadow-2xl"
           >
-
             {/* Project Image */}
             <div className="overflow-hidden">
               <img
@@ -82,7 +73,6 @@ export default function Projects() {
 
             {/* Content */}
             <div className="p-8">
-
               {/* Title */}
               <h2 className="text-3xl font-bold text-white mb-4">
                 {project.title}
@@ -95,7 +85,6 @@ export default function Projects() {
 
               {/* Tech Stack */}
               <div className="flex flex-wrap gap-3 mb-8">
-
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
@@ -108,7 +97,6 @@ export default function Projects() {
 
               {/* Buttons */}
               <div className="flex">
-
                 <a
                   href={project.live}
                   target="_blank"
@@ -118,8 +106,6 @@ export default function Projects() {
                   <ExternalLink size={18} />
                   Live Demo
                 </a>
-
-                
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X, Download } from "lucide-react";
 
-import resume from "../../public/gabriel_wafula_resume.pdf";
+import resume from "/gabriel_wafula_resume.pdf";
 
 export default function NavigationBar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,7 +25,7 @@ export default function NavigationBar() {
   };
 
   const linkStyles =
-    "relative text-slate-300 hover:text-white transition-all duration-300 text-lg font-medium";
+    "relative text-slate-300 hover:text-white transition-all duration-300 text-lg font-medium focus:text-cyan-500";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">

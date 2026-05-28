@@ -71,11 +71,11 @@ import {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-2 shadow-xl"
+              className="group p-8 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:scale-105 shadow-xl"
             >
   
               {/* Icon */}
-              <div className="text-cyan-400 mb-6 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-cyan-400 mb-6 group-hover:scale-[1.12] transition-transform duration-300">
                 {service.icon}
               </div>
   
