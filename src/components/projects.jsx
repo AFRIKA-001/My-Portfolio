@@ -68,6 +68,7 @@ export default function Projects() {
                 className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
                 src={project.img}
                 alt={project.title}
+                loading ="lazy"
               />
             </div>
 

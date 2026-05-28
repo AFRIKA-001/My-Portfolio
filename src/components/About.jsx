@@ -37,6 +37,7 @@ export default function AboutPage() {
               className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl"
               src={ProfilePic}
               alt="Gabriel profile"
+              loading="lazy"
             />
           </div>
         </div>
