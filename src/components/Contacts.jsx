@@ -31,7 +31,7 @@ export default function Contacts() {
         .insert([formData]);
 
       if (error) {
-        alert("Something went wrong:Try again later (network issues) " + error.message);
+        toast.error("Something went wrong" + error.message);
       } else {
         toast.success(`Message sent successfully dear ${formData.name} i shall get in touch as soon as possible!`);
 
