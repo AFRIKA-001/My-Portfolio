@@ -78,7 +78,7 @@ import {
           </div>
   
           {/* Bottom Section */}
-          <div className="border-t border-slate-800 mt-10 pt-6 text-center">
+          <div className=" border-t border-slate-800 mt-10 pt-6 text-center">
   
             <p className="text-slate-500 text-sm lg:text-base">
               © 2026 Shikuku Gabriel. All rights reserved.
