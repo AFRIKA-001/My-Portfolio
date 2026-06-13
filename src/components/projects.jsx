@@ -1,4 +1,4 @@
-import { ExternalLink } from "lucide-react";
+import { ExternalLink ,GithubIcon} from "lucide-react";
 import JahaFoodsImg from "/JahaFoods.jpg";
 import JahaShoe from "/JahaShoes.jpg";
 
@@ -14,6 +14,7 @@ export default function Projects() {
       tech: ["React.js", "Tailwind CSS", "Supabase"],
 
       live: "https://jaha-foods-store.vercel.app",
+      git: "https://github.com/AFRIKA-001/Food-Delivery-Store"
     },
 
     {
@@ -26,6 +27,7 @@ export default function Projects() {
       tech: ["React.js", "Tailwind CSS", "Supabase", "Framer Motion"],
 
       live: "https://shoe-cloathing-store.vercel.app/",
+      git: "https://github.com/AFRIKA-001/Shoe-Cloathing-Store"
     },
   ];
 
@@ -44,7 +46,7 @@ export default function Projects() {
 
         <h1 className="text-5xl lg:text-7xl font-bold text-white">
           Latest{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
             Projects
           </span>
         </h1>
@@ -97,7 +99,7 @@ export default function Projects() {
               </div>
 
               {/* Buttons */}
-              <div className="flex">
+              <div className="flex gap-15">
                 <a
                   href={project.live}
                   target="_blank"
@@ -106,6 +108,15 @@ export default function Projects() {
                 >
                   <ExternalLink size={18} />
                   Live Demo
+                </a>
+                <a
+                  href={project.git}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-white font-semibold transition-all duration-300 hover:scale-105"
+                >
+                  <GithubIcon size={20} />
+                  Github Link
                 </a>
               </div>
             </div>
