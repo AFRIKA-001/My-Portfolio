@@ -6,11 +6,7 @@ export default function HeroSection() {
   return (
     <section className="relative overflow-hidden min-h-screen flex items-center justify-center px-6 py-20">
       
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/20 blur-3xl rounded-full"></div>
-      </div>
-
+     
       <div className="w-full  mx-auto text-center">
 
         {/* Profile/Icon */}
@@ -28,7 +24,7 @@ export default function HeroSection() {
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight text-white">
           Hi, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-400 to-emerald-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 via-blue-400 to-emerald-500">
             Shikuku Gabriel
           </span>
         </h1>
