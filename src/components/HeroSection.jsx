@@ -22,7 +22,7 @@ export default function HeroSection() {
 
         {/* Small Intro */}
         <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm lg:text-base mb-4 font-semibold">
-          Frontend Developer • Kenya
+          Software Engineer • Kenya
         </p>
 
         {/* Main Heading */}
