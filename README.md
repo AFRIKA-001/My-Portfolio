@@ -1,18 +1,54 @@
-# React + Vite
+# My Portfolio | Software Engineer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An overview of my technical journey, architecture philosophies, and a curated collection of production-grade applications I have engineered.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About Me
 
-## React Compiler
+Hello! I'm **Shikuku Gabriel**, a Software Engineer specializing in scalable backend architectures and robust full-stack workflows. I build systems that prioritize clean data separation, security, and exceptional performance.
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+* 🌍 Based in: Nairobi, Kenya
+* 💼 Current Focus: Node.js, Express ecosystems, and Database Optimization
+* ⚡ Core Philosophy: *"Code is written for humans to understand and machines to execute."*
 
-Note: This will impact Vite dev & build performances.
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technical Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Technologies |
+| :--- | :--- |
+| **Backend & Core** | Node.js, Express.js, JavaScript (ES6+), EJS (Server-Side Rendering) |
+| **Databases** | SQL | PostgreSQL,
+| **Architecture & Tools** | Git/Version Control, RESTful APIs, Linux (Kali/Ubuntu) |
+| **Frontend Integration** |React.js,Next.js, Tailwind CSS, HTML5, Semantic UI |
+
+---
+
+## 🏢 Featured Projects
+
+### 1. Dynamic E-Commerce Backend Ecosystem
+I engineered a full-stack food delivery app using Baas(Supabase).
+
+* **Tech Stack:** React.js,tailwindcss,lucide-react,framer motion & supabase
+* **📂 Link to Project:** `https://jaha-foods-store.vercel.app`
+
+### 2. A Fashion E-Commerce platform
+A modern E-commerce botique for selling shoes and clothes.
+
+* **Tech Stack:** React.js,tailwindcss,lucide-react,framer-motion,supabase
+* **📂 Link to Project:** `https://shoe-cloathing-store.vercel.app/`
+
+
+## 📈 GitHub Statistics
+
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=AFRIKA-001&show_icons=true&theme=radical)
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=AFRIKA-001&layout=compact&theme=radical)
+
+---
+
+## 📫 Let's Connect
+
+* **LinkedIn:** [linkedin.com/in/gabriel wafula](https://linkedin.co)
+* **Email:** shikukugabriel06@gmail.com
+* **Portfolio Website:** [yourportfolio.dev](https://shikuku-gabriel-wafula.vercel.app/)
