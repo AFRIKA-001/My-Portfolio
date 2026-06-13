@@ -19,7 +19,7 @@ Hello! I'm **Shikuku Gabriel**, a Software Engineer specializing in scalable bac
 | Category | Technologies |
 | :--- | :--- |
 | **Backend & Core** | Node.js, Express.js, JavaScript (ES6+), EJS (Server-Side Rendering) |
-| **Databases** | SQL | PostgreSQL,
+| **Databases** | SQL, PostgreSQL,
 | **Architecture & Tools** | Git/Version Control, RESTful APIs, Linux (Kali/Ubuntu) |
 | **Frontend Integration** |React.js,Next.js, Tailwind CSS, HTML5, Semantic UI |
 
@@ -51,4 +51,4 @@ A modern E-commerce botique for selling shoes and clothes.
 
 * **LinkedIn:** [linkedin.com/in/gabriel wafula](https://linkedin.co)
 * **Email:** shikukugabriel06@gmail.com
-* **Portfolio Website:** [yourportfolio.dev](https://shikuku-gabriel-wafula.vercel.app/)
+* **Portfolio Website:** [https://shikuku-gabriel-wafula.vercel.app/](https://shikuku-gabriel-wafula.vercel.app/)
