@@ -44,7 +44,7 @@ export default function AboutPage() {
 
           <p className="text-slate-900 text-lg leading-relaxed mb-6">
             Hi! I'm <span className="text-red-600 font-semibold">Gabriel</span>,
-            a self-driven frontend developer passionate about building modern,
+            a self-driven Engineer passionate about building modern,
             responsive, and user-friendly web applications.
           </p>
 

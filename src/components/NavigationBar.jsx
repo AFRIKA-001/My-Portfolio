@@ -27,10 +27,10 @@ export default function NavigationBar() {
 //linkStyles
 
   const linkStyles =
-    "relative text-slate-300 hover:text-white transition-all duration-300 text-lg font-medium focus:text-cyan-500";
+    "relative text-slate-900 hover:text-black transition-all duration-300 text-lg font-medium ";
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-400 bg-slate-950 backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-400 md:bg-transparent backdrop-blur-xl">
 
       <div className="max-w-8xl mx-auto flex items-center justify-between h-20 px-6">
 
@@ -53,7 +53,7 @@ export default function NavigationBar() {
               to={link.path}
               className={({ isActive }) =>
                 `${linkStyles} ${
-                  isActive ? "focus:text-red-600" : "text-slate-300 hover:text-white"
+                  isActive ? "focus:text-red-600" : "text-black hover:text-black"
                 }`
               }
             >
@@ -75,20 +75,20 @@ export default function NavigationBar() {
         {/* Mobile Menu Button */}
         <button
           onClick={toggleMenu}
-          className="lg:hidden text-white"
+          className="md:hidden text-black"
           aria-label="Toggle Navigation Menu"
         >
           {isOpen ? (
             <X size={32} className="text-red-400" />
           ) : (
-            <Menu size={32} />
+            <Menu  size={32} />
           )}
         </button>
       </div>
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-slate-950 backdrop-blur-xl">
+        <div className="lg:hidden border-t border-slate-800 bg-black backdrop-blur-xl">
 
           <nav className="flex flex-col px-6 py-6 space-y-5">
 
