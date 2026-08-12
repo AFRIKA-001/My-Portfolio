@@ -113,7 +113,7 @@ export default function NavigationBar() {
             <a
               href={resume}
               download="gabriel_wafula_resume.pdf"
-              className="flex items-center  justify-center gap-2 mt-4  py-4 rounded-3xl bg-gray-500 hover:bg-gray-400 text-white font-semibold transition-all duration-300"
+              className="flex items-center  justify-center gap-2 mt-4  py-4 rounded-3xl bg-gray-700 hover:bg-gray-800 text-white font-semibold transition-all duration-300"
             >
               <Download size={18} />
               Download Resume
