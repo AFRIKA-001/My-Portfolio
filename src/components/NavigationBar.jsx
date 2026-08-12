@@ -53,7 +53,7 @@ export default function NavigationBar() {
               to={link.path}
               className={({ isActive }) =>
                 `${linkStyles} ${
-                  isActive ? "text-red-600" : "text-slate-300 hover:text-white"
+                  isActive ? "focus:text-red-600" : "text-slate-300 hover:text-white"
                 }`
               }
             >

@@ -71,7 +71,7 @@ import {
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gray-400 transition-all duration-300 hover:scale-105 shadow-xl"
+              className="group p-8 rounded-3xl bg-black border border-slate-800 hover:border-gray-400 transition-all duration-300 hover:scale-105 shadow-xl"
             >
   
               {/* Icon */}

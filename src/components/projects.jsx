@@ -59,7 +59,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group rounded-3xl overflow-hidden bg-slate-900  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
+            className="group rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
           >
             {/* Project Image */}
             <div className="overflow-hidden">
@@ -101,7 +101,7 @@ export default function Projects() {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-600 text-white font-semibold transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <ExternalLink size={18} />
                   Live Demo
@@ -110,7 +110,7 @@ export default function Projects() {
                   href={project.git}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-600 text-white font-semibold transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <GithubIcon size={20} />
                   Github Link

@@ -7,6 +7,7 @@ import LinuxIcon from "/linux.svg";
 import postgresqlIcon from "/postgresql.svg";
 import MySQLIcon from "/mysql.svg";
 import supabaseIcon from "/supabase.svg";
+import html5 from '/html5.svg'
 
 export default function Skills() {
   const skills = [
@@ -60,6 +61,57 @@ export default function Skills() {
       icon: supabaseIcon,
       invert: true,
     },
+    {
+      name:"HTML",
+      icon:html5,
+      invert:true,
+
+    }, {
+      name:"node.js",
+      icon:html5,
+      invert:true,
+
+    } ,{
+      name:"Express",
+      icon:html5,
+      invert:true,
+
+    }, {
+      name:"SQL",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"Postman",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"CSS",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"JavaScript",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"EJS",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"RestAPIs",
+      icon:html5,
+      invert:true,
+
+    },{
+      name:"JWT",
+      icon:html5,
+      invert:true,
+
+    },
   ];
 
   return (
@@ -88,7 +140,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="group flex flex-col items-center justify-center gap-5 h-40 rounded-3xl bg-slate-900 border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition-all duration-300 shadow-xl"
+            className="group flex flex-col items-center justify-center gap-5 h-40 rounded-3xl bg-black border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition-all duration-300 shadow-xl"
           >
             {/* Icon */}
             <img

@@ -36,14 +36,14 @@ export default function HeroSection() {
 
           <Link
             to="/projects"
-            className="px-8 py-4 rounded-2xl border bg-slate-600 hover:border-white-400/10 transition-all duration-300 text-white font-semibold shadow-lg shadow-slate-700 hover:scale-105"
+            className="px-8 py-4 rounded-2xl border bg-slate-600 hover:border-white-400/10 hover:bg-black transition-all duration-300 text-white font-semibold shadow-lg shadow-slate-700 hover:scale-105"
           >
             View Projects
           </Link>
 
           <Link
             to="/contacts"
-            className="px-8 py-4 rounded-2xl border bg-slate-600  text-slate-200 hover:text-white transition-all duration-300 shadow-lg shadow-slate-700 hover:scale-105"
+            className="px-8 py-4 rounded-2xl border bg-slate-600 hover:bg-black  text-slate-200 hover:text-white transition-all duration-300 shadow-lg shadow-slate-700 hover:scale-105"
           >
             Contact Me
           </Link>

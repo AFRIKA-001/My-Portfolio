@@ -64,7 +64,7 @@ import {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 text-xl transition-all duration-300 hover:-translate-y-2 hover:border-red-400 ${social.color}`}
+                  className={`p-4 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 text-xl transition-all duration-300 hover:-translate-y-2 bg-linear-to-br from-black via-slate-600 to-red-700 ${social.color}`}
                 >
                   {social.icon}
                 </a>

@@ -48,6 +48,10 @@ export default function Contacts() {
     }
 
   };
+ const inputStyles = 
+ 'w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition'
+
+
 
   return (
     <>
@@ -127,7 +131,8 @@ export default function Contacts() {
           </div>
 
           {/* Right Side Form */}
-          <div className="bg-slate-900 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+          <div className="bg-black border border-slate-800 rounded-3xl p-8 shadow-2xl">
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -141,8 +146,8 @@ export default function Contacts() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="Gabriel Doe"
+                  className="w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
+                  placeholder="your name"
                 />
               </div>
 
@@ -158,8 +163,8 @@ export default function Contacts() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="gabriel@example.com"
+                  className={inputStyles}
+                  placeholder="example@gmail.com"
                 />
               </div>
 
