@@ -64,25 +64,20 @@ export default function Skills() {
 
   return (
     <section className="relative px-6 py-24 overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
-      </div>
-
       {/* Heading */}
       <div className="text-center mb-20">
-        <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+        <p className="uppercase tracking-[0.3em] text-red-600 text-sm font-semibold mb-4">
           My Tech Stack
         </p>
 
-        <h1 className="text-5xl lg:text-7xl font-bold text-white">
+        <h1 className="text-5xl lg:text-7xl font-bold">
           Technical{' '}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-red-600">
             Skills
           </span>
         </h1>
 
-        <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-8 text-lg lg:text-xl text-slate-900 max-w-3xl mx-auto leading-relaxed">
           Here are some of the technologies and tools I use to build modern,
           scalable, and high-performance web applications.
         </p>
@@ -93,7 +88,7 @@ export default function Skills() {
         {skills.map((skill, index) => (
           <div
             key={index}
-            className="group flex flex-col items-center justify-center gap-5 h-40 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition-all duration-300 shadow-xl"
+            className="group flex flex-col items-center justify-center gap-5 h-40 rounded-3xl bg-slate-900 border border-slate-800 hover:border-cyan-400 hover:-translate-y-3 transition-all duration-300 shadow-xl"
           >
             {/* Icon */}
             <img

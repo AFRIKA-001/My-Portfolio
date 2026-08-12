@@ -37,28 +37,28 @@ import {
     ];
   
     return (
-      <section className="relative px-6 py-24 overflow-hidden">
+      <section className="relative px-8 py-24 overflow-hidden">
   
         {/* Background Glow */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
+        {/* <div className="absolute inset-0 -z-10">
+          <div className="absolute top-40 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/ blur-3xl rounded-full"></div>
         </div>
-  
+   */}
         {/* Heading */}
         <div className="text-center mb-20">
   
-          <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+          <p className="uppercase tracking-[0.3em] text-red-600 text-sm font-semibold mb-4 text-center">
             What I Do
           </p>
   
-          <h1 className="text-5xl lg:text-7xl font-bold text-white">
+          <h1 className="text-5xl lg:text-7xl font-bold">
             My{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
-              Services
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-900 via-gray-500 to-black">
+               Services
             </span>
           </h1>
   
-          <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg lg:text-xl text-slate-900 max-w-3xl mx-auto leading-relaxed">
             I build fast, scalable, and interactive web applications with modern
             technologies focused on performance, responsiveness, and user
             experience.
@@ -66,12 +66,12 @@ import {
         </div>
   
         {/* Services Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
   
           {services.map((service, index) => (
             <div
               key={index}
-              className="group p-8 rounded-3xl bg-slate-900/60 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:scale-105 shadow-xl"
+              className="group p-8 rounded-3xl bg-slate-900 border border-slate-800 hover:border-gray-400 transition-all duration-300 hover:scale-105 shadow-xl"
             >
   
               {/* Icon */}

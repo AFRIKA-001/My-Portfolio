@@ -2,22 +2,19 @@ import ProfilePic from "/output.jpg";
 
 export default function AboutPage() {
   return (
-    <section className="relative px-6 py-24 overflow-hidden">
+    <section className="relative px-6 py-4 overflow-hidden min-h-screen">
 
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-indigo-500/10 blur-3xl rounded-full"></div>
-      </div>
+    
 
       {/* Heading */}
       <div className="text-center mb-16">
-        <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+        <p className="uppercase tracking-[0.3em] text-sm font-semibold mb-4">
           Get To Know Me
         </p>
 
-        <h1 className="text-5xl lg:text-7xl font-bold text-white">
+        <h1 className="text-5xl lg:text-7xl font-bold ">
           About{" "}
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-red-500">
             Me
           </span>
         </h1>
@@ -29,10 +26,6 @@ export default function AboutPage() {
         {/* Profile Image */}
         <div className="flex justify-center">
           <div className="relative">
-
-            {/* Glow Ring */}
-            <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cyan-500 to-indigo-600 blur-2xl opacity-30"></div>
-
             <img
               className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full object-cover border-4 border-slate-700 shadow-2xl"
               src={ProfilePic}
@@ -45,19 +38,19 @@ export default function AboutPage() {
         {/* About Text */}
         <div className="text-center lg:text-left">
 
-          <h2 className="text-3xl lg:text-4xl font-bold text-white leading-tight mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold  leading-tight mb-6">
             Computer Science Student & MERN Stack Developer
           </h2>
 
-          <p className="text-slate-300 text-lg leading-relaxed mb-6">
-            Hi! I'm <span className="text-white font-semibold">Gabriel</span>,
+          <p className="text-slate-900 text-lg leading-relaxed mb-6">
+            Hi! I'm <span className="text-red-600 font-semibold">Gabriel</span>,
             a self-driven frontend developer passionate about building modern,
             responsive, and user-friendly web applications.
           </p>
 
-          <p className="text-slate-300 text-lg leading-relaxed mb-6">
+          <p className="text-slate-900 text-lg leading-relaxed mb-6">
             My development philosophy is centered around{" "}
-            <span className="text-cyan-400 font-semibold">
+            <span className="text-red-500 font-semibold">
               project-based learning
             </span>
             . I believe the best way to master technologies like React and the
@@ -65,9 +58,9 @@ export default function AboutPage() {
             improving through hands-on experience.
           </p>
 
-          <p className="text-slate-300 text-lg leading-relaxed">
+          <p className="text-slate-900 text-lg leading-relaxed">
             Beyond frontend development, I enjoy exploring{" "}
-            <span className="text-white font-semibold">
+            <span className="text-red-600 font-semibold">
               web performance, backend systems, and cybersecurity
             </span>{" "}
             to ensure the applications I build are secure, optimized, and
