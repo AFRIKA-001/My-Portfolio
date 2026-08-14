@@ -1,5 +1,5 @@
 import React from 'react'
-import { createBrowserRouter,RouterProvider } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom"
 import RootLayout from './RootLayout.jsx';
 import ErrorMessage from './ErrorPage.jsx';
 import AboutPage from './About.jsx';
@@ -9,6 +9,7 @@ import Contacts from './Contacts.jsx';
 import Footer from './footer.jsx';
 import Projects from './projects.jsx';
 import App from '../App.jsx';
+
  const  router = createBrowserRouter([
 
    {path:'/',

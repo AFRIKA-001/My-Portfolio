@@ -35,12 +35,7 @@ import {
     ];
   
     return (
-      <footer className="relative border-t border-slate-800 mt-24">
-  
-        {/* Glow */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute left-1/2 -translate-x-1/2 top-0 w-[400px] h-[200px] bg-cyan-500/10 blur-3xl"></div>
-        </div>
+      <footer className="relative border-t bg-black border-slate-800 mt-24">
   
         <div className="max-w-6xl mx-auto px-6 py-10">
   
@@ -50,13 +45,13 @@ import {
             {/* Branding */}
             <div className="text-center md:text-left">
   
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-red-600 ">
                 Shikuku Gabriel
               </h2>
   
-              <p className="text-slate-400 mt-2 max-w-md">
-                Frontend Developer focused on building modern,
-                responsive, and scalable web applications.
+              <p className="text-slate-50 mt-2 max-w-md">
+                Software Engineer focused on building modern,
+                responsive, and scalable fullstack web applications.
               </p>
             </div>
   
@@ -69,7 +64,7 @@ import {
                   href={social.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className={`p-4 rounded-2xl bg-slate-900 border border-slate-800 text-slate-300 text-xl transition-all duration-300 hover:-translate-y-2 hover:border-cyan-400 ${social.color}`}
+                  className={`p-4 rounded-2xl text-slate-300 text-xl transition-all duration-300 hover:-translate-y-2 bg-linear-to-br from-black via-slate-600 to-slate-600 ${social.color}`}
                 >
                   {social.icon}
                 </a>

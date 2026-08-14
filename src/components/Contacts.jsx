@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, SendHorizonal } from "lucide-react";
-import Footer from "./footer.jsx";
 import { supabase } from "../../supabaseClient";
 import toast from "react-hot-toast";
 
@@ -48,29 +47,29 @@ export default function Contacts() {
     }
 
   };
+ const inputStyles = 
+ 'w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition'
+
+
 
   return (
     <>
       <section className="relative px-6 py-24 overflow-hidden">
-        {/* Background Glow */}
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute bottom-20 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-cyan-500/10 blur-3xl rounded-full"></div>
-        </div>
-
+    
         {/* Heading */}
         <div className="text-center mb-20">
-          <p className="uppercase tracking-[0.4em] text-cyan-400 text-sm font-semibold mb-4">
+          <p className="uppercase tracking-[0.4em] text-red-600 text-sm font-semibold mb-4">
             Contact
           </p>
 
-          <h1 className="text-5xl lg:text-7xl font-bold text-white">
+          <h1 className="text-5xl lg:text-7xl font-bold">
             Get In{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-indigo-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-600 to-black">
               Touch
             </span>
           </h1>
 
-          <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+          <p className="mt-8 text-lg lg:text-xl text-slate-900 max-w-3xl mx-auto leading-relaxed">
             I'm currently open to freelance opportunities, collaborations, and
             exciting frontend projects with backend as a service.
           </p>
@@ -80,11 +79,11 @@ export default function Contacts() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
           {/* Left Side */}
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold leading-relaxed mb-6">
               Let's Build Something Amazing
             </h2>
 
-            <p className="text-slate-300 text-lg leading-relaxed mb-10">
+            <p className="text-slate-900 text-lg leading-relaxed mb-10">
               If you have a project idea, business, or startup that needs a
               modern web experience, feel free to reach out. I’d love to hear
               about it.
@@ -94,44 +93,45 @@ export default function Contacts() {
             <div className="space-y-6">
               {/*email info */}
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
-                  <Mail className="text-cyan-400" size={24} />
+                <div className="p-4 rounded-2xl bg-black border border-slate-800">
+                  <Mail className="text-white" size={24} />
                 </div>
 
                 <div>
-                  <p className="text-slate-400 text-sm">Email</p>
-                  <p className="text-white">shikukugabriel06@gmail.com</p>
+                  <p className="text-red-600 text-sm">Email</p>
+                  <p>shikukugabriel06@gmail.com</p>
                 </div>
               </div>
 
               {/*phone information */}
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
-                  <Phone className="text-cyan-400" size={24} />
+                <div className="p-4 rounded-2xl bg-black border border-slate-800">
+                  <Phone className="text-white" size={24} />
                 </div>
 
                 <div>
-                  <p className="text-slate-400 text-sm">Phone</p>
-                  <p className="text-white">+254 714 058 073</p>
+                  <p className="text-red-600 text-sm">Phone</p>
+                  <p>+254 714 058 073</p>
                 </div>
               </div>
 
               {/*location information */}
               <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-slate-900 border border-slate-800">
-                  <MapPin className="text-cyan-400" size={24} />
+                <div className="p-4 rounded-2xl bg-black border border-slate-800">
+                  <MapPin className="text-white" size={24} />
                 </div>
 
                 <div>
-                  <p className="text-slate-400 text-sm">Location</p>
-                  <p className="text-white">Nairobi, Kenya</p>
+                  <p className="text-red-600 text-sm">Location</p>
+                  <p>Nairobi, Kenya</p>
                 </div>
               </div>
             </div>
           </div>
 
           {/* Right Side Form */}
-          <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-8 shadow-2xl">
+          <div className="bg-black border border-slate-800 rounded-3xl p-8 shadow-2xl">
+
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name */}
               <div>
@@ -145,8 +145,8 @@ export default function Contacts() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="Gabriel Doe"
+                  className="w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
+                  placeholder="your name"
                 />
               </div>
 
@@ -162,8 +162,8 @@ export default function Contacts() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full h-14 px-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="gabriel@example.com"
+                  className={inputStyles}
+                  placeholder="example@gmail.com"
                 />
               </div>
 
@@ -188,7 +188,7 @@ export default function Contacts() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl bg-cyan-500 hover:bg-cyan-400 transition-all duration-300 text-white font-semibold hover:scale-[1.02] disabled:opacity-50"
+                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl border border-slate-600  hover:bg-black transition-all duration-300 text-white font-semibold hover:scale-[1.02] disabled:opacity-50"
               >
                 <SendHorizonal size={20} />
 
@@ -199,7 +199,6 @@ export default function Contacts() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }

@@ -33,36 +33,33 @@ export default function Projects() {
 
   return (
     <section className="relative px-6 py-24 overflow-hidden">
-      {/* Background Glow */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-50 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-cyan-500/10 blur-3xl rounded-full"></div>
-      </div>
+    
 
       {/* Heading */}
       <div className="text-center mb-20">
-        <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm font-semibold mb-4">
+        <p className="uppercase tracking-[0.3em]  text-sm font-semibold mb-4">
           Portfolio
         </p>
 
-        <h1 className="text-5xl lg:text-7xl font-bold text-white">
+        <h1 className="text-5xl lg:text-7xl font-bold ">
           Latest{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-red-500">
             Projects
           </span>
         </h1>
 
-        <p className="mt-8 text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="mt-8 text-lg lg:text-xl text-slate-900 max-w-3xl mx-auto leading-relaxed">
           Here are some of the real-world applications I’ve built using modern
           frontend technologies and backend services.
         </p>
       </div>
 
       {/* Projects Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group rounded-3xl overflow-hidden bg-slate-900/10 border border-slate-800 hover:border-cyan-400 transition-all duration-300 hover:-translate-y-3 shadow-2xl"
+            className="group rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
           >
             {/* Project Image */}
             <div className="overflow-hidden">
@@ -91,7 +88,7 @@ export default function Projects() {
                 {project.tech.map((tech, i) => (
                   <span
                     key={i}
-                    className="px-4 py-2 rounded-full bg-slate-800 border border-slate-700 text-slate-300 text-sm hover:border-cyan-400 transition duration-300"
+                    className="px-4 py-2 rounded-full bg-slate-800  text-slate-200 text-sm border border-black hover:border-gray-400 transition duration-300"
                   >
                     {tech}
                   </span>
@@ -104,7 +101,7 @@ export default function Projects() {
                   href={project.live}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-white font-semibold transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <ExternalLink size={18} />
                   Live Demo
@@ -113,7 +110,7 @@ export default function Projects() {
                   href={project.git}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-cyan-500 hover:bg-cyan-400 text-white font-semibold transition-all duration-300 hover:scale-105"
+                  className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-slate-700 hover:bg-slate-900 text-white font-semibold transition-all duration-300 hover:scale-105"
                 >
                   <GithubIcon size={20} />
                   Github Link
