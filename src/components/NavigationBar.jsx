@@ -27,7 +27,7 @@ export default function NavigationBar() {
 //linkStyles
 
   const linkStyles =
-    "relative text-slate-900 hover:text-black transition-all duration-300 text-lg font-medium ";
+    "relative text-slate-900 hover:text-black transition-all duration-300 text-lg font-medium  focus:border-b";
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-400 md:bg-transparent backdrop-blur-xl">

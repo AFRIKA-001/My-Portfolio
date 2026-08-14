@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Mail, Phone, MapPin, SendHorizonal } from "lucide-react";
-import Footer from "./footer.jsx";
 import { supabase } from "../../supabaseClient";
 import toast from "react-hot-toast";
 
@@ -200,7 +199,6 @@ export default function Contacts() {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 }
