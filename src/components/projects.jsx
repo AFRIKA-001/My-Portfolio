@@ -43,7 +43,7 @@ export default function Projects() {
 
         <h1 className="text-5xl lg:text-7xl font-bold ">
           Latest{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-red-500">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-700">
             Projects
           </span>
         </h1>
@@ -59,18 +59,17 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className="group rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
+            className=" group  rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
           >
             {/* Project Image */}
             <div className="overflow-hidden">
               <img
-                className="w-full h-72 object-cover group-hover:scale-105 transition-transform duration-500"
+                className="w-full h-72 object-cover overflow-hidden group-hover:scale-105 transition-transform duration-500"
                 src={project.img}
                 alt={project.title}
                 loading ="lazy"
               />
             </div>
-
             {/* Content */}
             <div className="p-8">
               {/* Title */}
