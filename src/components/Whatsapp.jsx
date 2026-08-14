@@ -1,0 +1,15 @@
+import React from 'react'
+import { BsChat } from 'react-icons/bs'
+
+const Whatsapp = () => {
+  return (
+    <div className=' bg-linear-to-r from-green-500 via-green-600 to-green-700 px-6 py-3 fixed bottom-8 right-8 overflow-hidden'>
+        <a href="https://wa.me/254714058073" rel='noopener noreferrer' target='_blank' className='flex items-center'>
+        <BsChat size={34} className='text-white'></BsChat>
+        Chat
+        </a>
+    </div>
+  )
+}
+
+export default Whatsapp
