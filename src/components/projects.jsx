@@ -43,7 +43,7 @@ export default function Projects() {
 
         <h1 className="text-5xl lg:text-7xl font-bold ">
           Latest{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-red-500">
+          <span className="text-transparent bg-clip-text bg-black">
             Projects
           </span>
         </h1>

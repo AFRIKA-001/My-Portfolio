@@ -118,13 +118,13 @@ export default function Skills() {
     <section className="relative px-6 py-24 overflow-hidden">
       {/* Heading */}
       <div className="text-center mb-20">
-        <p className="uppercase tracking-[0.3em] text-red-600 text-sm font-semibold mb-4">
+        <p className="uppercase tracking-[0.3em] text-black text-sm font-semibold mb-4">
           My Tech Stack
         </p>
 
         <h1 className="text-5xl lg:text-7xl font-bold">
           Technical{' '}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 to-red-600">
+          <span className="text-transparent bg-clip-text bg-black">
             Skills
           </span>
         </h1>

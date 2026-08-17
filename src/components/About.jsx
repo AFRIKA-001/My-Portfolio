@@ -14,7 +14,7 @@ export default function AboutPage() {
 
         <h1 className="text-5xl lg:text-7xl font-bold ">
           About{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-400 to-red-500">
+          <span className="text-transparent bg-clip-text bg-black">
             Me
           </span>
         </h1>
@@ -43,14 +43,14 @@ export default function AboutPage() {
           </h2>
 
           <p className="text-slate-900 text-lg leading-relaxed mb-6">
-            Hi! I'm <span className="text-red-600 font-semibold">Gabriel</span>,
+            Hi! I'm <span className="text-black font-semibold">Gabriel</span>,
             a self-driven Engineer passionate about building modern,
             responsive, and user-friendly web applications.
           </p>
 
           <p className="text-slate-900 text-lg leading-relaxed mb-6">
             My development philosophy is centered around{" "}
-            <span className="text-red-500 font-semibold">
+            <span className="text-black font-semibold">
               project-based learning
             </span>
             . I believe the best way to master technologies like React and the
@@ -60,7 +60,7 @@ export default function AboutPage() {
 
           <p className="text-slate-900 text-lg leading-relaxed">
             Beyond frontend development, I enjoy exploring{" "}
-            <span className="text-red-600 font-semibold">
+            <span className="text-black font-semibold">
               web performance, backend systems, and cybersecurity
             </span>{" "}
             to ensure the applications I build are secure, optimized, and

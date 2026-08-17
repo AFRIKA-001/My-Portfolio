@@ -39,7 +39,7 @@ export default function NavigationBar() {
           to="/"
           className="text-3xl lg:text-4xl font-bold tracking-wide"
         >
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-500 via-red-400 to-red-600">
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-black  to-black tracking-widest ">
             Gabriel
           </span>
         </Link>
