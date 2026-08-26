@@ -58,7 +58,7 @@ export default function Contacts() {
     
         {/* Heading */}
         <div className="text-center mb-20">
-          <p className="uppercase tracking-[0.4em] text-red-600 text-sm font-semibold mb-4">
+          <p className="uppercase tracking-[0.4em] text-black text-sm font-semibold mb-4">
             Contact
           </p>
 

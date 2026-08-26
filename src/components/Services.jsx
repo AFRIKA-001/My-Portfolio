@@ -47,13 +47,13 @@ import {
         {/* Heading */}
         <div className="text-center mb-20">
   
-          <p className="uppercase tracking-[0.3em] text-red-600 text-sm font-semibold mb-4 text-center">
+          <p className="uppercase tracking-[0.3em] text-black text-sm font-semibold mb-4 text-center">
             What I Do
           </p>
   
           <h1 className="text-5xl lg:text-7xl font-bold">
             My{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-slate-900 via-gray-500 to-black">
+            <span className="text-transparent bg-clip-text bg-black">
                Services
             </span>
           </h1>

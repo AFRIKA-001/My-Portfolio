@@ -45,7 +45,7 @@ import {
             {/* Branding */}
             <div className="text-center md:text-left">
   
-              <h2 className="text-2xl font-bold text-red-600 ">
+              <h2 className="text-2xl font-bold text-white ">
                 Shikuku Gabriel
               </h2>
   

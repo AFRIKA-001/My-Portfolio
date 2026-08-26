@@ -17,7 +17,7 @@ export default function HeroSection() {
         {/* Main Heading */}
         <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold leading-tight ">
           Hi, I'm{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 via-red-500 to-red-600">
+          <span className="text-transparent bg-clip-text bg-black">
             Shikuku Gabriel
           </span>
         </h1>
@@ -25,7 +25,7 @@ export default function HeroSection() {
         {/* Subtitle */}
         <p className="mt-8 text-lg sm:text-xl lg:text-2xl text-slate-900 leading-relaxed max-w-3xl mx-auto">
           I build modern, responsive, and interactive,installable web applications using{" "}
-          <span className="text-red-600 font-semibold ">
+          <span className="text-black font-semibold ">
             React.js, Next.js, JavaScript, Tailwind CSS,supabase,node.js,express,RestAPIs,PostgreSQL
           </span>{" "}
           and frontend best practices.
