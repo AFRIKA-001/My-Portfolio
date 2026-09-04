@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Phone, MapPin, SendHorizonal } from "lucide-react";
+import { Mail, Phone, MapPin, SendHorizontal, CheckCircle2 } from "lucide-react";
 import { supabase } from "../../supabaseClient";
 import toast from "react-hot-toast";
 
@@ -12,193 +12,172 @@ export default function Contacts() {
 
   const [loading, setLoading] = useState(false);
 
-  //goes to the input fields
   const handleChange = (e) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
     }));
   };
-  //goes to the form on the submit prop
+
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     setLoading(true);
+    
     try {
       const { error } = await supabase
         .from("form_submissions")
         .insert([formData]);
 
       if (error) {
-        toast.error("Something went wrong" + error.message);
+        toast.error("Submission failed: " + error.message);
       } else {
-        toast.success(`Message sent successfully dear ${formData.name} i shall get in touch as soon as possible!`);
-
-        setFormData({
-          name: "",
-          email: "",
-          message: "",
-        });
+        // Professional, polished notification message
+        toast.success(`Thank you, ${formData.name}. Your message has been received!`);
+        setFormData({ name: "", email: "", message: "" });
       }
     } catch (error) {
-      console.error("there was a problem sending data " + error);
-    }finally{
+      console.error("Submission pipeline error: " + error);
+      toast.error("A network error occurred. Please try again.");
+    } finally {
       setLoading(false);
     }
-
   };
- const inputStyles = 
- 'w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition'
 
-
+  const labelStyles = "block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2";
+  const inputStyles = "w-full h-12 px-4 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder-slate-400 outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-400 transition-all text-sm shadow-xs";
 
   return (
-    <>
-      <section className="relative px-6 py-24 overflow-hidden">
-    
-        {/* Heading */}
-        <div className="text-center mb-20">
-          <p className="uppercase tracking-[0.4em] text-black text-sm font-semibold mb-4">
-            Contact
-          </p>
+    <section className="relative overflow-hidden bg-white px-6 py-20 md:px-12 lg:py-32">
+      
+      {/* Background Separation Divider Line */}
+      <div className="absolute top-0 left-1/2 -z-10 h-px w-full max-w-7xl -translate-x-1/2 bg-linear-to-r from-transparent via-slate-100 to-transparent" />
 
-          <h1 className="text-5xl lg:text-7xl font-bold">
-            Get In{" "}
-            <span className="text-transparent bg-clip-text bg-linear-to-r from-gray-600 to-black">
-              Touch
-            </span>
-          </h1>
+      {/* Heading */}
+      <div className="mx-auto max-w-3xl text-center mb-16 md:mb-24">
+        <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-slate-400 md:text-sm">
+          Get In Touch
+        </p>
 
-          <p className="mt-8 text-lg lg:text-xl text-slate-900 max-w-3xl mx-auto leading-relaxed">
-            I'm currently open to freelance opportunities, collaborations, and
-            exciting frontend projects with backend as a service.
-          </p>
-        </div>
+        <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+          Connect & <span className="text-black">Collaborate</span>
+        </h1>
 
-        {/* Main Grid */}
-        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          {/* Left Side */}
+        <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
+          I am currently open to full-stack engineering contracts, core integrations, and system build roles.
+        </p>
+      </div>
+
+      {/* Contact Panel Grid */}
+      <div className="mx-auto max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        {/* Left Side: Metadata & Channels */}
+        <div className="lg:col-span-5 space-y-8">
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold leading-relaxed mb-6">
-              Let's Build Something Amazing
+            <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl mb-4">
+              Let's build something scalable.
             </h2>
-
-            <p className="text-slate-900 text-lg leading-relaxed mb-10">
-              If you have a project idea, business, or startup that needs a
-              modern web experience, feel free to reach out. I’d love to hear
-              about it.
+            <p className="text-base leading-relaxed text-slate-500">
+              Have an architecture concept, feature roadmap, or open development opening? Drop a message directly into my pipeline database.
             </p>
+          </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6">
-              {/*email info */}
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-black border border-slate-800">
-                  <Mail className="text-white" size={24} />
-                </div>
-
-                <div>
-                  <p className="text-red-600 text-sm">Email</p>
-                  <p>shikukugabriel06@gmail.com</p>
-                </div>
+          {/* Contact Info Rows */}
+          <div className="space-y-4">
+            {/* Email card */}
+            <div className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-100 shadow-xs">
+                <Mail className="text-slate-700" size={18} />
               </div>
-
-              {/*phone information */}
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-black border border-slate-800">
-                  <Phone className="text-white" size={24} />
-                </div>
-
-                <div>
-                  <p className="text-red-600 text-sm">Phone</p>
-                  <p>+254 714 058 073</p>
-                </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Email Address</p>
+                <p className="text-sm font-semibold text-slate-700">shikukugabriel06@gmail.com</p>
               </div>
+            </div>
 
-              {/*location information */}
-              <div className="flex items-center gap-4">
-                <div className="p-4 rounded-2xl bg-black border border-slate-800">
-                  <MapPin className="text-white" size={24} />
-                </div>
+            {/* Phone card */}
+            <div className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-100 shadow-xs">
+                <Phone className="text-slate-700" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Direct Line</p>
+                <p className="text-sm font-semibold text-slate-700">+254 714 058 073</p>
+              </div>
+            </div>
 
-                <div>
-                  <p className="text-red-600 text-sm">Location</p>
-                  <p>Nairobi, Kenya</p>
-                </div>
+            {/* Location card */}
+            <div className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/50 p-4">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-100 shadow-xs">
+                <MapPin className="text-slate-700" size={18} />
+              </div>
+              <div>
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400">Current Base</p>
+                <p className="text-sm font-semibold text-slate-700">Nairobi, Kenya</p>
               </div>
             </div>
           </div>
-
-          {/* Right Side Form */}
-          <div className="bg-black border border-slate-800 rounded-3xl p-8 shadow-2xl">
-
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name */}
-              <div>
-                <label className="block uppercase text-sm text-slate-300 mb-2">
-                  Full Name
-                </label>
-
-                <input
-                  type="text"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  required
-                  className="w-full h-14 px-4 rounded-2xl bg-gray-900 border border-slate-700 text-white outline-none focus:border-cyan-400 transition"
-                  placeholder="your name"
-                />
-              </div>
-
-              {/* Email */}
-              <div>
-                <label className="block uppercase text-sm text-slate-300 mb-2">
-                  Email Address
-                </label>
-
-                <input
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className={inputStyles}
-                  placeholder="example@gmail.com"
-                />
-              </div>
-
-              {/* Message */}
-              <div>
-                <label className="block uppercase text-sm text-slate-300 mb-2">
-                  Message
-                </label>
-
-                <textarea
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  rows={6}
-                  className="w-full p-4 rounded-2xl bg-slate-950 border border-slate-700 text-white outline-none focus:border-cyan-400 transition resize-none"
-                  placeholder="Tell me about your project..."
-                />
-              </div>
-
-              {/* Submit Button */}
-              <button
-                type="submit"
-                disabled={loading}
-                className="w-full flex items-center justify-center gap-3 py-4 rounded-2xl border border-slate-600  hover:bg-black transition-all duration-300 text-white font-semibold hover:scale-[1.02] disabled:opacity-50"
-              >
-                <SendHorizonal size={20} />
-
-                {loading ? "Sending..." : "Send Message" }
-              </button>
-            </form>
-          </div>
         </div>
-      </section>
 
-    </>
+        {/* Right Side: Clean Input Panel */}
+        <div className="lg:col-span-7 rounded-2xl border border-slate-100 bg-slate-50/40 p-8 hover:shadow-md transition-shadow">
+          <form onSubmit={handleSubmit} className="space-y-5">
+            <div>
+              <label className={labelStyles}>Full Name</label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className={inputStyles}
+                placeholder="John Doe"
+              />
+            </div>
+
+            <div>
+              <label className={labelStyles}>Email Address</label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className={inputStyles}
+                placeholder="johndoe@example.com"
+              />
+            </div>
+
+            <div>
+              <label className={labelStyles}>Your Message</label>
+              <textarea
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+                required
+                rows={5}
+                className="w-full p-4 rounded-xl border border-slate-200 bg-white text-slate-900 placeholder-slate-400 outline-none focus:border-slate-400 focus:ring-1 focus:ring-slate-400 transition-all text-sm shadow-xs resize-none"
+                placeholder="Provide details about your project timeline or role parameters..."
+              />
+            </div>
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="group flex w-full items-center justify-center gap-2 rounded-xl bg-slate-950 py-3.5 text-sm font-semibold text-white shadow-sm transition-all duration-200 hover:bg-slate-800 disabled:opacity-50 active:scale-[0.99]"
+            >
+              {loading ? (
+                <span>Processing Stream...</span>
+              ) : (
+                <>
+                  <span>Send Message</span>
+                  <SendHorizontal size={14} className="transition-transform group-hover:translate-x-0.5" />
+                </>
+              )}
+            </button>
+          </form>
+        </div>
+        
+      </div>
+    </section>
   );
 }

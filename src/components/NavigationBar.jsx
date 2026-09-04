@@ -1,7 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
-import { Menu, X, Download } from "lucide-react";
-
+import { Menu, X, FileDown } from "lucide-react";
 import resume from "/gabriel_wafula_resume.pdf";
 
 export default function NavigationBar() {
@@ -16,44 +15,26 @@ export default function NavigationBar() {
     { name: "Contact", path: "/contacts" },
   ];
 
-  const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
-//linkStyles
-
-  const linkStyles =
-    "relative text-slate-900 hover:text-black transition-all duration-300 text-lg font-medium  focus:border-b";
-
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-400 md:bg-transparent backdrop-blur-xl">
-
-      <div className="max-w-8xl mx-auto flex items-center justify-between h-20 px-6">
-
-        {/* Logo */}
-        <Link
-          to="/"
-          className="text-3xl lg:text-4xl font-bold tracking-wide"
-        >
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-black  to-black tracking-widest ">
-            Gabriel
-          </span>
+    <header className="sticky top-0 z-50 w-full border-b border-slate-100 bg-white/80 backdrop-blur-md">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 md:px-12">
+        
+        {/* 1. Sleek Minimal Logo */}
+        <Link to="/" className="text-xl font-bold tracking-tight text-slate-900 transition hover:opacity-80">
+          Gabriel<span className="text-slate-400 font-light">.dev</span>
         </Link>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-10">
-
-          { navLinks.map((link, index) => (
+        {/* 2. Desktop Navigation Layout */}
+        <nav className="hidden md:flex items-center gap-8">
+          {navLinks.map((link, index) => (
             <NavLink
               key={index}
               to={link.path}
               className={({ isActive }) =>
-                `${linkStyles} ${
-                  isActive ? "focus:text-red-600" : "text-black hover:text-black"
+                `relative text-sm font-medium transition-colors duration-200 py-1.5 ${
+                  isActive
+                    ? "text-slate-900 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-full after:bg-slate-900"
+                    : "text-slate-500 hover:text-slate-900"
                 }`
               }
             >
@@ -61,47 +42,39 @@ export default function NavigationBar() {
             </NavLink>
           ))}
 
-          {/* Resume Button */}
+          {/* Premium Desktop CTA Button */}
           <a
             href={resume}
             download="gabriel_wafula_resume.pdf"
-            className="flex items-center gap-2 px-5 py-3 rounded-2xl bg-slate-800 hover:bg-gray-600 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg shadow-cyan-500/20"
+            className="flex items-center gap-2 rounded-xl bg-slate-950 px-4 py-2 text-xs font-semibold text-white shadow-sm transition-all duration-200 hover:bg-slate-800 active:scale-[0.98]"
           >
-            <Download size={18} />
-            Resume
+            <FileDown size={14} />
+            <span>Resume</span>
           </a>
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* 3. Corrected Mobile Menu Button (Synced Breakpoint with Nav) */}
         <button
-          onClick={toggleMenu}
-          className="md:hidden text-black"
+          onClick={() => setIsOpen(!isOpen)}
+          className="flex h-9 w-9 items-center justify-center rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 md:hidden transition-colors"
           aria-label="Toggle Navigation Menu"
         >
-          {isOpen ? (
-            <X size={32} className="text-red-400" />
-          ) : (
-            <Menu  size={32} />
-          )}
+          {isOpen ? <X size={18} /> : <Menu size={18} />}
         </button>
       </div>
 
-      {/* Mobile Navigation */}
+      {/* 4. Elegant Clean Mobile Overlay Menu */}
       {isOpen && (
-        <div className="lg:hidden border-t border-slate-800 bg-black backdrop-blur-xl">
-
-          <nav className="flex flex-col px-6 py-6 space-y-5">
-
+        <div className="absolute top-16 left-0 w-full border-b border-slate-200 bg-white/95 px-6 py-6 shadow-lg backdrop-blur-lg md:hidden animate-fade-in">
+          <nav className="flex flex-col space-y-4">
             {navLinks.map((link, index) => (
               <NavLink
                 key={index}
                 to={link.path}
-                onClick={closeMenu}
+                onClick={() => setIsOpen(false)}
                 className={({ isActive }) =>
-                  `text-lg font-medium transition ${
-                    isActive
-                      ? "text-red-600"
-                      : "text-slate-300 hover:text-white"
+                  `text-base font-medium transition-colors duration-150 ${
+                    isActive ? "text-slate-900 font-semibold" : "text-slate-500"
                   }`
                 }
               >
@@ -109,14 +82,14 @@ export default function NavigationBar() {
               </NavLink>
             ))}
 
-            {/* Mobile Resume Button */}
+            {/* Mobile CTA Button */}
             <a
               href={resume}
               download="gabriel_wafula_resume.pdf"
-              className="flex items-center  justify-center gap-2 mt-4  py-4 rounded-3xl bg-gray-700 hover:bg-gray-800 text-white font-semibold transition-all duration-300"
+              className="flex items-center justify-center gap-2 rounded-xl bg-slate-950 py-3 text-sm font-semibold text-white shadow-sm transition-all duration-200"
             >
-              <Download size={18} />
-              Download Resume
+              <FileDown size={16} />
+              <span>Download Resume</span>
             </a>
           </nav>
         </div>
@@ -124,77 +97,3 @@ export default function NavigationBar() {
     </header>
   );
 }
-
-
-
-
-
-
-
-
-
-// import { Link } from 'react-router-dom';
-// import { useState } from 'react';
-// import { Menu, X } from 'lucide-react'; // Changed MenuIcon to Menu
-// import resume from '/gabriel_wafula_resume.pdf'
-
-
-// export default function NavigationBar() {
-//     const [isOpen, setIsOpen] = useState(false);
-
-//     const toggleMenu = () => {
-//         setIsOpen(!isOpen);
-//     };
-
-//     const linkStyles = "rounded active:bg-stone-600 text-white hover:text-slate-50 transition-all duration-300 px-4 text-lg font-medium hover:bg-[#1E1E1E] hover:underline";
-
-//     return (
-//         <header className="sticky top-0 z-50 w-full  text-white bg-white/10 backdrop-blur-md border-b border-white/20">
-//             <div className="flex items-center justify-between px-8 h-20">
-//                 {/* Logo */}
-//                 <h1 className="text-transparent font-serif animate-pulse bg-clip-text bg-gradient-to-l from-cyan-500 to-indigo-600 font-bold text-2xl lg:text-4xl">
-//                     <Link to="/"><span className="text-2xl lg:text-5xl ">G</span>abriel</Link>
-//                 </h1>
-
-//                 {/* Desktop Menu - Hidden on mobile */}
-//                 <ul className="hidden lg:flex gap-5 items-center">
-//                     <li className={linkStyles}><Link  to="/" >Home</Link></li>
-//                     <li className={linkStyles}><Link  to="/about">About</Link></li>
-//                     <li className={linkStyles}><Link  to="/services">Services</Link></li>
-//                     <li className={linkStyles}><Link  to="/skills">Skills</Link></li>
-//                      <li className={linkStyles}><Link  to="/projects">Projects</Link></li>
-//                     <li className={linkStyles}><Link   to="/contacts">Contacts</Link></li>
-//                     <button className='bg-cyan-600 hover:bg-cyan-500 px-4 py-1 text-xl rounded-2xl transition-colors'>
-//                         <a href='resume' download='gabriel-wafula_resume.pdf'>Resume</a>
-//                     </button>
-//                 </ul>
-
-//                 {/* Mobile Toggle Button - Visible only on mobile */}
-//                 <button 
-//                     onClick={toggleMenu} 
-//                     className="lg:hidden p-2 text-white"
-//                     aria-label="Toggle Menu"
-//                 >
-//                     {isOpen ? <X className='text-red-600' size={32} /> : <Menu size={32} />}
-//                 </button>
-//             </div>
-
-//             {/* Mobile Menu Dropdown */}
-//             {isOpen && (
-//                 <ul className="lg:hidden flex flex-col bg-[#070606] border-t border-slate-700 p-4 gap-4">
-//                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/">Home</Link></li>
-//                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/about">About</Link></li>
-//                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/services">Services</Link></li>
-//                     <li className={linkStyles} onClick={toggleMenu}><Link to="/skills">Skills</Link></li>
-//                     <li className={linkStyles} onClick={toggleMenu}><Link  to="/projects">Projects</Link></li>
-//                     <li className={linkStyles} onClick={toggleMenu}><Link to="/contacts">Contacts</Link></li>
-//                     <button className='bg-cyan-600 cursor-pointer active:bg-cyan-800 text-white px-4 py-2 rounded-2xl active:scale-90'>
-//                         <a href={resume} download='gabriel_wafula_resume.pdf'>Resume</a>
-//                     </button>
-//                 </ul>
-//             )}
-//         </header>
-//     );
-//  }
-
-

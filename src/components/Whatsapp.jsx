@@ -1,25 +1,29 @@
-import React from 'react'
-import { BsChat } from 'react-icons/bs'
+import { MessageCircle } from "lucide-react";
 
-const Whatsapp = () => {
+export default function Whatsapp() {
   return (
-    <>
-    <section>
-    <div className="bg-linear-to-r from-red-500 via-red-600 to-red-700 fixed bottom-8 right-8 z-50 animate-ping w-[1em] h-[1em] rounded-full"></div>
+    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+      {/* 1. Subtle, Professional Pulse Ring (Green, matching the brand) */}
+      <span className="absolute inline-flex h-12 w-32 animate-ping rounded-full bg-emerald-400/20 opacity-75 duration-1000" />
 
-    <div className=' bg-linear-to-r from-green-500 via-green-600 to-green-700 px-6 py-3 fixed rounded-2xl bottom-8 right-8 overflow-hidden'>
-      <a href="https://wa.me/254714058073" rel='noopener noreferrer' target='_blank' className='flex items-center gap-3'>
-        <BsChat size={34} className='text-white '></BsChat>
-        Chat
+      {/* 2. Floating Action Anchor Link */}
+      <a
+        href="https://wa.me/254714058073"
+        rel="noopener noreferrer"
+        target="_blank"
+        aria-label="Chat on WhatsApp"
+        className="group relative flex items-center gap-2 rounded-full bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-300 hover:bg-emerald-500 hover:shadow-emerald-600/20 active:scale-[0.95]"
+      >
+        {/* Subtle Micro-Rotation Interaction on Icon Hover */}
+        <MessageCircle size={18} className="transition-transform duration-300 group-hover:rotate-12" />
+        <span>Chat Now</span>
+
+        {/* 3. Small Mini-Indicator Light inside the Button */}
+        <span className="relative flex h-2 w-2 ml-0.5">
+          <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-300 opacity-75"></span>
+          <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
+        </span>
       </a>
-
     </div>
-
-    </section>
-    
-   
-    </>
-  )
+  );
 }
-
-export default Whatsapp
