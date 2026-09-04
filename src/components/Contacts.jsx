@@ -50,7 +50,7 @@ export default function Contacts() {
     <section className="relative overflow-hidden bg-white px-6 py-20 md:px-12 lg:py-32">
       
       {/* Background Separation Divider Line */}
-      <div className="absolute top-0 left-1/2 -z-10 h-px w-full max-w-7xl -translate-x-1/2 bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
+      <div className="absolute top-0 left-1/2 -z-10 h-px w-full max-w-7xl -translate-x-1/2 bg-linear-to-r from-transparent via-slate-100 to-transparent" />
 
       {/* Heading */}
       <div className="mx-auto max-w-3xl text-center mb-16 md:mb-24">
