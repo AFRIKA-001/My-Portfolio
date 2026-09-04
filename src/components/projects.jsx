@@ -12,7 +12,7 @@ export default function Projects() {
       challenge: "Synchronizing high-frequency cart states across disparate viewports without causing excessive DOM re-renders.",
       solution: "Implemented central state architecture hooks combined with multi-tier component rendering strategies.",
       tech: ["React.js", "Tailwind CSS", "Supabase BaaS", "REST APIs"],
-      live: "https://food-delivery-store.vercel.app",
+      live: "https://jaha-foods-store.vercel.app/",
       git: "https://github.com/AFRIKA-001/Food-Delivery-Store"
     },
     {
