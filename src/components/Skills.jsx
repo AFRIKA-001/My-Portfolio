@@ -82,12 +82,12 @@ export default function Skills() {
               {category.skills.map((skill, index) => (
                 <div
                   key={index}
-                  className="group flex flex-col items-center justify-center p-5 min-h-[110px] rounded-xl border border-slate-100 bg-gray-600 text-center transition-all duration-200 hover:border-slate-300 hover:bg-white hover:shadow-md"
+                  className="group flex flex-col items-center justify-center p-5 min-h-[110px] rounded-xl border border-slate-100 text-center transition-all duration-200 hover:border-slate-300 hover:bg-white hover:shadow-md"
                 >
                   {/* Icon Render Guard (Uses neat fallback frame if custom SVG isn't mapped) */}
                   {skill.icon ? (
                     <img
-                      className="w-7 h-7 object-contain opacity-70 transition-transform duration-300 group-hover:scale-110 group-hover:opacity-100 grayscale hover:grayscale-0"
+                      className="w-7 h-7 object-contain  transition-transform duration-300 group-hover:scale-110 group-hover:opacity-100 grayscale hover:grayscale-0"
                       src={skill.icon}
                       alt={skill.name}
                     />
