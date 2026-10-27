@@ -3,6 +3,7 @@ import { Outlet } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
 import Whatsapp from "./Whatsapp.jsx";
 import Footer from "./footer.jsx"
+import Tawk from "./Tawk.jsx";
 
 function RootLayout() {
   return (
@@ -12,6 +13,7 @@ function RootLayout() {
       <Outlet />
        <Footer/>
       <Whatsapp />
+      <Tawk />
     </div>
   );
 }
