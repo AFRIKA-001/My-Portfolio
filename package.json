@@ -12,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.105.1",
     "@tailwindcss/vite": "^4.2.1",
+    "@tawk.to/tawk-messenger-react": "^2.0.2",
     "framer-motion": "^12.38.0",
     "lucide-react": "^0.577.0",
     "motion": "^12.38.0",
