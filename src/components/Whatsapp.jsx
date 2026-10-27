@@ -1,4 +1,5 @@
 import { BsChat } from 'react-icons/bs'
+import { MessageCircle } from "lucide-react";
 
 
 export default function Whatsapp() {
