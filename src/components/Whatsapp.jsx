@@ -2,7 +2,7 @@ import { MessageCircle } from "lucide-react";
 
 export default function Whatsapp() {
   return (
-    <div className="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+    <div className="fixed bottom-10 right-4 z-50 flex mb-20 items-center justify-center">
       {/* 1. Subtle, Professional Pulse Ring (Green, matching the brand) */}
       <span className="absolute inline-flex h-12 w-32 animate-ping rounded-full bg-emerald-400/20 opacity-75 duration-1000" />
 
@@ -24,6 +24,7 @@ export default function Whatsapp() {
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-400"></span>
         </span>
       </a>
+      
     </div>
   );
 }
