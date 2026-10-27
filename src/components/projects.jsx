@@ -39,6 +39,12 @@ export default function Projects() {
         <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-slate-400 md:text-sm">
           Case Studies
         </p>
+
+        <h1 className="text-5xl lg:text-7xl font-bold ">
+          Latest{" "}
+          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-700">
+            Projects
+          </span>
         <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
           Production <span className="text-black">Projects</span>
         </h1>
@@ -52,6 +58,39 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
+            className=" group  rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
+          >
+            {/* Project Image */}
+            <div className="overflow-hidden">
+              <img
+                className="w-full h-72 object-cover overflow-hidden group-hover:scale-105 transition-transform duration-500"
+                src={project.img}
+                alt={project.title}
+                loading ="lazy"
+              />
+            </div>
+            {/* Content */}
+            <div className="p-8">
+              {/* Title */}
+              <h2 className="text-3xl font-bold text-white mb-4">
+                {project.title}
+              </h2>
+
+              {/* Description */}
+              <p className="text-slate-300 leading-relaxed text-lg mb-6">
+                {project.description}
+              </p>
+
+              {/* Tech Stack */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                {project.tech.map((tech, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 rounded-full bg-slate-800  text-slate-200 text-sm border border-black hover:border-gray-400 transition duration-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
             className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-100 bg-black transition-all duration-300 hover:border-slate-300 hover:shadow-xl"
           >
             {/* Project Banner Visual Wrapper */}

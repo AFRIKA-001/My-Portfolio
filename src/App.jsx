@@ -5,6 +5,7 @@ import Services from "./components/Services.jsx"
 import Skills from "./components/Skills.jsx"
 import Contacts from "./components/Contacts.jsx"
 import Projects from "./components/projects.jsx"
+import Whatsapp from "./components/Whatsapp.jsx"
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
   <Skills/>
   <Projects/>
   <Contacts/>
- 
+  <Whatsapp/>
 
    </div>
  

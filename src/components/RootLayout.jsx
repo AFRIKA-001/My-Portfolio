@@ -1,3 +1,7 @@
+import React from 'react'
+import { Outlet } from 'react-router-dom'
+import NavigationBar from './NavigationBar'
+import Whatsapp from './Whatsapp.jsx'
 import React from "react";
 import { Outlet } from "react-router-dom";
 import NavigationBar from "./NavigationBar";
@@ -11,6 +15,8 @@ function RootLayout() {
       <NavigationBar />
 
       <Outlet />
+      <Whatsapp />
+   
        <Footer/>
       <Whatsapp />
       <Tawk />
