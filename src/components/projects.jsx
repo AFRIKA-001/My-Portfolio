@@ -32,7 +32,7 @@ export default function Projects() {
     <section className="relative overflow-hidden bg-white px-6 py-20 md:px-12 lg:py-32">
       
       {/* Visual Separation Accent Divider */}
-      <div className="absolute top-0 left-1/2 -z-10 h-px w-full max-w-7xl -translate-x-1/2 bg-gradient-to-r from-transparent via-slate-100 to-transparent" />
+      <div className="absolute top-0 left-1/2 -z-10 h-px w-full max-w-7xl -translate-x-1/2 bg-linear-to-r from-transparent via-slate-100 to-transparent" />
 
       {/* Heading */}
       <div className="mx-auto max-w-3xl text-center mb-16 md:mb-24">
@@ -40,14 +40,10 @@ export default function Projects() {
           Case Studies
         </p>
 
-        <h1 className="text-5xl lg:text-7xl font-bold ">
-          Latest{" "}
-          <span className="text-transparent bg-clip-text bg-linear-to-r from-red-600 to-red-700">
-            Projects
-          </span>
         <h1 className="text-4xl font-black tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
-          Production <span className="text-black">Projects</span>
+          Production <span className="text-red-600">Projects</span>
         </h1>
+        
         <p className="mt-6 text-base leading-relaxed text-slate-600 sm:text-lg">
           A showcase of full-stack engineering work, highlighting algorithmic problem-solving and clean system performance.
         </p>
@@ -58,40 +54,7 @@ export default function Projects() {
         {projects.map((project, index) => (
           <div
             key={index}
-            className=" group  rounded-3xl overflow-hidden bg-black  transition-all duration-300 hover:-translate-y-3 shadow-2xl"
-          >
-            {/* Project Image */}
-            <div className="overflow-hidden">
-              <img
-                className="w-full h-72 object-cover overflow-hidden group-hover:scale-105 transition-transform duration-500"
-                src={project.img}
-                alt={project.title}
-                loading ="lazy"
-              />
-            </div>
-            {/* Content */}
-            <div className="p-8">
-              {/* Title */}
-              <h2 className="text-3xl font-bold text-white mb-4">
-                {project.title}
-              </h2>
-
-              {/* Description */}
-              <p className="text-slate-300 leading-relaxed text-lg mb-6">
-                {project.description}
-              </p>
-
-              {/* Tech Stack */}
-              <div className="flex flex-wrap gap-3 mb-8">
-                {project.tech.map((tech, i) => (
-                  <span
-                    key={i}
-                    className="px-4 py-2 rounded-full bg-slate-800  text-slate-200 text-sm border border-black hover:border-gray-400 transition duration-300"
-                  >
-                    {tech}
-                  </span>
-                ))}
-            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-100 bg-black transition-all duration-300 hover:border-slate-300 hover:shadow-xl"
+            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-slate-100 bg-black transition-all duration-300 hover:border-slate-300 hover:shadow-xl hover:-translate-y-2"
           >
             {/* Project Banner Visual Wrapper */}
             <div>
@@ -109,22 +72,22 @@ export default function Projects() {
                 <h2 className="text-xl font-bold text-white mb-3 tracking-tight">
                   {project.title}
                 </h2>
-                <p className="text-sm leading-relaxed text-slate-500 mb-6">
+                <p className="text-sm leading-relaxed text-slate-300 mb-6">
                   {project.description}
                 </p>
 
                 {/* Professional Case Study Callouts */}
-                <div className="mb-6 space-y-3 rounded-xl bg-slate-50 p-4 border border-slate-100/60">
+                <div className="mb-6 space-y-3 rounded-xl bg-slate-900 p-4 border border-slate-800">
                   <div className="flex gap-2.5 items-start">
-                    <AlertCircle className="h-4 w-4 text-amber-600 shrink-0 mt-0.5" />
-                    <p className="text-xs text-slate-600 leading-normal">
-                      <span className="font-semibold text-slate-900">Engineering Challenge:</span> {project.challenge}
+                    <AlertCircle className="h-4 w-4 text-amber-500 shrink-0 mt-0.5" />
+                    <p className="text-xs text-slate-300 leading-normal">
+                      <span className="font-semibold text-white">Engineering Challenge:</span> {project.challenge}
                     </p>
                   </div>
-                  <div className="flex gap-2.5 items-start border-t border-slate-200/50 pt-2.5">
-                    <Terminal className="h-4 w-4 text-blue-600 shrink-0 mt-0.5" />
-                    <p className="text-xs text-slate-600 leading-normal">
-                      <span className="font-semibold text-slate-900">Architecture Solution:</span> {project.solution}
+                  <div className="flex gap-2.5 items-start border-t border-slate-800 pt-2.5">
+                    <Terminal className="h-4 w-4 text-blue-400 shrink-0 mt-0.5" />
+                    <p className="text-xs text-slate-300 leading-normal">
+                      <span className="font-semibold text-white">Architecture Solution:</span> {project.solution}
                     </p>
                   </div>
                 </div>
@@ -134,7 +97,7 @@ export default function Projects() {
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="rounded-lg border border-slate-200 bg-white px-3 py-1 text-[11px] font-medium text-slate-600"
+                      className="rounded-lg border border-slate-700 bg-slate-800 px-3 py-1 text-[11px] font-medium text-slate-200"
                     >
                       {tech}
                     </span>
@@ -149,7 +112,7 @@ export default function Projects() {
                 href={project.live}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 rounded-xl bg-slate-950 px-5 py-2.5 text-xs font-semibold text-white shadow-xs transition hover:bg-slate-800 active:scale-[0.98]"
+                className="flex items-center gap-1.5 rounded-xl bg-slate-100 px-5 py-2.5 text-xs font-semibold text-black shadow-xs transition hover:bg-white active:scale-[0.98]"
               >
                 <ExternalLink size={14} />
                 <span>Live Demo</span>
@@ -158,7 +121,7 @@ export default function Projects() {
                 href={project.git}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 rounded-xl border border-slate-200 bg-white px-5 py-2.5 text-xs font-semibold text-slate-700 shadow-xs transition hover:bg-slate-50 hover:text-slate-950 active:scale-[0.98]"
+                className="flex items-center gap-1.5 rounded-xl border border-slate-700 bg-slate-800 px-5 py-2.5 text-xs font-semibold text-slate-200 shadow-xs transition hover:bg-slate-700 hover:text-white active:scale-[0.98]"
               >
                 <Github size={14} />
                 <span>Source Code</span>
